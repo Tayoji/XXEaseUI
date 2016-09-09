@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "XXChatUI"
-s.version      = "1.0.0"
+s.version      = "1.0.1"
 s.summary      = "修车人聊天系统"
 s.homepage     = "https://github.com/Tayoji/XXEaseUI"
 #s.screenshots  = "https://raw.githubusercontent.com/vikmeup/SCPopUpView/master/errorScreenshot.png", "https://raw.githubusercontent.com/vikmeup/SCPopUpView/master/successScreenshot.png"
