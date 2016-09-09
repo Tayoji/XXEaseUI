@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		56ACA6A51D824CD400C5F857 /* EaseUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ACA6A41D824CD400C5F857 /* EaseUI.m */; };
 		56ACA6A71D824D0300C5F857 /* MJRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ACA6A61D824D0300C5F857 /* MJRefreshExtensions.swift */; };
+		56ACA6AB1D82797700C5F857 /* MWPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 56ACA6AA1D82797700C5F857 /* MWPhotoBrowser.bundle */; };
+		56ACA6AD1D82798200C5F857 /* ChatListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56ACA6AC1D82798200C5F857 /* ChatListCell.xib */; };
 		56C761E51D813FE600908639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C761E41D813FE600908639 /* AppDelegate.swift */; };
 		56C761E71D813FE600908639 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C761E61D813FE600908639 /* ViewController.swift */; };
 		56C761EA1D813FE600908639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56C761E81D813FE600908639 /* Main.storyboard */; };
@@ -68,7 +70,6 @@
 		56C763C61D81437600908639 /* PSTGridLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C762C11D81437600908639 /* PSTGridLayoutItem.m */; };
 		56C763C71D81437600908639 /* PSTGridLayoutRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C762C31D81437600908639 /* PSTGridLayoutRow.m */; };
 		56C763C81D81437600908639 /* PSTGridLayoutSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C762C51D81437600908639 /* PSTGridLayoutSection.m */; };
-		56C763C91D81437600908639 /* MWPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 56C762C61D81437600908639 /* MWPhotoBrowser.bundle */; };
 		56C763CA1D81437600908639 /* EaseSDKHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C762C91D81437600908639 /* EaseSDKHelper.m */; };
 		56C763CB1D81437600908639 /* EaseConversationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C762CC1D81437600908639 /* EaseConversationModel.m */; };
 		56C763CC1D81437600908639 /* EaseMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C762CE1D81437600908639 /* EaseMessageModel.m */; };
@@ -120,7 +121,6 @@
 		56C763FB1D81437600908639 /* VerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C7633C1D81437600908639 /* VerticalButton.m */; };
 		56C763FC1D81437600908639 /* EaseRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C7633F1D81437600908639 /* EaseRecordView.m */; };
 		56C763FD1D81437600908639 /* EaseConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C763421D81437600908639 /* EaseConversationCell.m */; };
-		56C764021D81437600908639 /* ChatListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56C763721D81437600908639 /* ChatListCell.xib */; };
 		56C764031D81437600908639 /* EaseUIResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 56C763731D81437600908639 /* EaseUIResource.bundle */; };
 		56C764041D81437600908639 /* ChatConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C763761D81437600908639 /* ChatConfiguration.swift */; };
 		56C764051D81437600908639 /* EaseChatDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C763771D81437600908639 /* EaseChatDetailsController.swift */; };
@@ -155,6 +155,8 @@
 		56ACA6A31D824CD400C5F857 /* EaseUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseUI.h; sourceTree = "<group>"; };
 		56ACA6A41D824CD400C5F857 /* EaseUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseUI.m; sourceTree = "<group>"; };
 		56ACA6A61D824D0300C5F857 /* MJRefreshExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJRefreshExtensions.swift; sourceTree = "<group>"; };
+		56ACA6AA1D82797700C5F857 /* MWPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MWPhotoBrowser.bundle; sourceTree = "<group>"; };
+		56ACA6AC1D82798200C5F857 /* ChatListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatListCell.xib; sourceTree = "<group>"; };
 		56C761E11D813FE600908639 /* XXEaseUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XXEaseUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C761E41D813FE600908639 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56C761E61D813FE600908639 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -284,7 +286,6 @@
 		56C762C31D81437600908639 /* PSTGridLayoutRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTGridLayoutRow.m; sourceTree = "<group>"; };
 		56C762C41D81437600908639 /* PSTGridLayoutSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTGridLayoutSection.h; sourceTree = "<group>"; };
 		56C762C51D81437600908639 /* PSTGridLayoutSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTGridLayoutSection.m; sourceTree = "<group>"; };
-		56C762C61D81437600908639 /* MWPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MWPhotoBrowser.bundle; sourceTree = "<group>"; };
 		56C762C81D81437600908639 /* EaseSDKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseSDKHelper.h; sourceTree = "<group>"; };
 		56C762C91D81437600908639 /* EaseSDKHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseSDKHelper.m; sourceTree = "<group>"; };
 		56C762CB1D81437600908639 /* EaseConversationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseConversationModel.h; sourceTree = "<group>"; };
@@ -392,7 +393,6 @@
 		56C7633F1D81437600908639 /* EaseRecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseRecordView.m; sourceTree = "<group>"; };
 		56C763411D81437600908639 /* EaseConversationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseConversationCell.h; sourceTree = "<group>"; };
 		56C763421D81437600908639 /* EaseConversationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseConversationCell.m; sourceTree = "<group>"; };
-		56C763721D81437600908639 /* ChatListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatListCell.xib; sourceTree = "<group>"; };
 		56C763731D81437600908639 /* EaseUIResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EaseUIResource.bundle; sourceTree = "<group>"; };
 		56C763761D81437600908639 /* ChatConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatConfiguration.swift; sourceTree = "<group>"; };
 		56C763771D81437600908639 /* EaseChatDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EaseChatDetailsController.swift; sourceTree = "<group>"; };
@@ -634,7 +634,6 @@
 			children = (
 				56C7626F1D81437500908639 /* Classes */,
 				56C762831D81437500908639 /* Libraries */,
-				56C762C61D81437600908639 /* MWPhotoBrowser.bundle */,
 			);
 			path = MWPhotoBrowser;
 			sourceTree = "<group>";
@@ -865,6 +864,7 @@
 		56C763091D81437600908639 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				56ACA6AC1D82798200C5F857 /* ChatListCell.xib */,
 				56C7630A1D81437600908639 /* contact */,
 				56C7630D1D81437600908639 /* conversation */,
 				56C763401D81437600908639 /* conversationList */,
@@ -992,7 +992,7 @@
 		56C763711D81437600908639 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				56C763721D81437600908639 /* ChatListCell.xib */,
+				56ACA6AA1D82797700C5F857 /* MWPhotoBrowser.bundle */,
 				56C763731D81437600908639 /* EaseUIResource.bundle */,
 			);
 			path = resources;
@@ -1166,8 +1166,8 @@
 				56C764031D81437600908639 /* EaseUIResource.bundle in Resources */,
 				56C761EC1D813FE600908639 /* Assets.xcassets in Resources */,
 				56C761EA1D813FE600908639 /* Main.storyboard in Resources */,
-				56C763C91D81437600908639 /* MWPhotoBrowser.bundle in Resources */,
-				56C764021D81437600908639 /* ChatListCell.xib in Resources */,
+				56ACA6AB1D82797700C5F857 /* MWPhotoBrowser.bundle in Resources */,
+				56ACA6AD1D82798200C5F857 /* ChatListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
