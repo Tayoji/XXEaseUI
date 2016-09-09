@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AEAAB32CEAA074C1C6E95AAF58784039972A85B1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C648D4EEB6A683769A268318CC356F3C111B43AF" : 0,
+    "AEAAB32CEAA074C1C6E95AAF58784039972A85B1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F21ED2E9-CCB0-4C0F-942C-5F8E2F241C5B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C648D4EEB6A683769A268318CC356F3C111B43AF" : "XXEaseUI\/XXEaseUI\/ChatUI\/",
+    "AEAAB32CEAA074C1C6E95AAF58784039972A85B1" : "XXEaseUI\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "XXEaseUI",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "XXEaseUI.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Tayoji\/XXEaseUI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AEAAB32CEAA074C1C6E95AAF58784039972A85B1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.1.252:9010\/tangyoujian\/EaseUI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C648D4EEB6A683769A268318CC356F3C111B43AF"
+    }
+  ]
+}
