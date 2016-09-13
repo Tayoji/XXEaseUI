@@ -28,7 +28,9 @@
     if ([NSString instancesRespondToSelector:@selector(sizeWithAttributes:)]) {
         titleSize = [title sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10]}];
     } else {
-        titleSize = [title sizeWithFont:[UIFont systemFontOfSize:10]];
+        titleSize = [title sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10]}];
+
+        //[title sizeWithFont:[UIFont systemFontOfSize:10]];
     }
     [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
     [self setImageEdgeInsets:UIEdgeInsetsMake(0,

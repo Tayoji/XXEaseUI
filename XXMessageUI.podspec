@@ -10,7 +10,8 @@ s.author             = { "Tayoji" => "595521651@qq.com" }
 s.platform     = :ios
 s.ios.deployment_target = '8.0'
 s.source       = { :git => "https://github.com/Tayoji/XXEaseUI.git", :tag => s.version }
-s.source_files  = 'XXEaseUI/MessageUI/**/*.swift','XXEaseUI/MessageUI/MessageUIBridgingHeader.h'
+s.source_files  = 'XXEaseUI/MessageUI/**/*.swift'
 #s.framework  = "QuartzCore"
 s.requires_arc = true
+s.dependency 'MJRefresh'
 end

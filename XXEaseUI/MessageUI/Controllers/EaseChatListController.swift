@@ -98,7 +98,10 @@ extension EaseChatListController:UITableViewDataSource{
     }
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete{
-            EMClient.sharedClient().chatManager.deleteConversation(conversations[indexPath.row].conversationId, deleteMessages: true)
+           // EMClient.sharedClient().chatManager.deleteConversation(conversations[indexPath.row].conversationId, deleteMessages: true)
+             EMClient.sharedClient().chatManager.deleteConversation(conversations[indexPath.row].conversationId, isDeleteMessages: true, completion: { (str, error) in
+                
+             })
             conversations.removeAtIndex(indexPath.row)
             tableView.reloadData()
         }

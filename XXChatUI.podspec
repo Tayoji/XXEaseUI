@@ -10,8 +10,9 @@ s.author             = { "Tayoji" => "595521651@qq.com" }
 s.platform     = :ios
 s.ios.deployment_target = '8.0'
 s.source       = { :git => "https://github.com/Tayoji/XXEaseUI.git", :tag => s.version }
-s.source_files  = "XXEaseUI/ChatUI/EMUIKit/*"
+s.source_files  = "XXEaseUI/ChatUI/EMUIKit/**/*.{h,m,a}"
 s.resources     = "XXEaseUI/ChatUI/resources/*"
-#s.framework  = "QuartzCore"
+#s.framework  = 'HyphenateFullSDK'
 s.requires_arc = true
+s.dependency 'HyphenateFullSDK'
 end

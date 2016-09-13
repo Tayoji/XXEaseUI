@@ -256,7 +256,10 @@
                     EMError *leaveError;
                     [[EMClient sharedClient].roomManager leaveChatroom:chatroomId error:&leaveError];
                     if (leaveError == nil) {
-                        [[EMClient sharedClient].chatManager deleteConversation:chatroomId deleteMessages:YES];
+                     //   [[EMClient sharedClient].chatManager deleteConversation:chatroomId deleteMessages:YES];
+                        [[EMClient sharedClient].chatManager deleteConversation:chatroomId isDeleteMessages:YES completion:^(NSString *aConversationId, EMError *aError) {
+                            
+                        }];
                     }
                 }
             }

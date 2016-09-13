@@ -72,7 +72,7 @@ static EaseMessageReadManager *detailInstance = nil;
         _photoBrowser.displayNavArrows = YES;
         _photoBrowser.displaySelectionButtons = NO;
         _photoBrowser.alwaysShowControls = NO;
-        _photoBrowser.wantsFullScreenLayout = YES;
+//        _photoBrowser.wantsFullScreenLayout = YES;
         _photoBrowser.zoomPhotosToFill = YES;
         _photoBrowser.enableGrid = NO;
         _photoBrowser.startOnGrid = NO;
@@ -183,13 +183,17 @@ static EaseMessageReadManager *detailInstance = nil;
                     if (![[dict objectForKey:@"isPlayed"] boolValue]) {
                         [dict setObject:@YES forKey:@"isPlayed"];
                         chatMessage.ext = dict;
-                        [[EMClient sharedClient].chatManager updateMessage:chatMessage];
+                        [[EMClient sharedClient].chatManager updateMessage:chatMessage completion:^(EMMessage *aMessage, EMError *aError) {
+                            
+                        }];
                     }
                 } else {
                     NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:chatMessage.ext];
                     [dic setObject:@YES forKey:@"isPlayed"];
                     chatMessage.ext = dic;
-                    [[EMClient sharedClient].chatManager updateMessage:chatMessage];
+                    [[EMClient sharedClient].chatManager updateMessage:chatMessage completion:^(EMMessage *aMessage, EMError *aError) {
+                        
+                    }];
                 }
             }
         }
