@@ -1,16 +1,16 @@
 PODS:
   - HyphenateFullSDK (3.1.5)
   - MJRefresh (3.1.12)
-  - XXMessageUI (1.0.3)
+  - XXMessageUI (1.0.4)
 
 DEPENDENCIES:
   - HyphenateFullSDK
   - MJRefresh
-  - XXMessageUI (~> 1.0.3)
+  - XXMessageUI (~> 1.0.4)
 
 SPEC CHECKSUMS:
   HyphenateFullSDK: 536f76eeb0914dba766b1d5d30dee083f0805da2
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  XXMessageUI: 1085592737130e4366fcc88ea0905472a3b099f0
+  XXMessageUI: 4605157d87b043bcd4747ed3bde2262060efc378
 
 COCOAPODS: 0.39.0
