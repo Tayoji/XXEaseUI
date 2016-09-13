@@ -10,55 +10,23 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>002D80A2D80FE3ACB86F772EEB278521</key>
+		<key>010D417D9721714F38CAA2A3DA3E94D4</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>4D8D1E4820AC63BDA999ECB63B7FDDFE</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>EMMessageBody.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/EMMessageBody.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>007BF149219CE3B166E8AEC6A6C81732</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MJRefreshHeader.m</string>
-			<key>path</key>
-			<string>MJRefresh/Base/MJRefreshHeader.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0258A1E3772D652C3822A0B2BA3D9609</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIView+MJExtension.m</string>
-			<key>path</key>
-			<string>MJRefresh/UIView+MJExtension.m</string>
+			<string>Resources</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>0280CA04713C64EBF432A3DE23B6730C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>235D233261A653EBFD1696555DC0EB5D</string>
+			<string>AFF92A2FCAC22EC80E77AF16C00A76DB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -72,11 +40,11 @@
 		<key>02871BE77D386E21968368621DB606D5</key>
 		<dict>
 			<key>fileRef</key>
-			<string>37F5C7B43C8E4915C547B6CC1C15E4F4</string>
+			<string>052736766B5CAAAFAB61FB4E64CD8E47</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>051001A95DE38B15B5183CB83CDF3C09</key>
+		<key>02BA3C247CD76EA4E2F8D897079E3129</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -85,92 +53,103 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MJRefreshBackNormalFooter.m</string>
+			<string>MJRefreshFooter.m</string>
 			<key>path</key>
-			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.m</string>
+			<string>MJRefresh/Base/MJRefreshFooter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>03B25B5F9ED76548AE1C2090493AF733</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMTextMessageBody.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMTextMessageBody.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>052505C3B1AD99183253FA5E27B70D7D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshComponent.m</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshComponent.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>052736766B5CAAAFAB61FB4E64CD8E47</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshGifHeader.m</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Header/MJRefreshGifHeader.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0615242873B798B139B82D79D1A0C8CF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefresh.h</string>
+			<key>path</key>
+			<string>MJRefresh/MJRefresh.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>065E0F9B1A07CDADC8F19096F2A6B36D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9784B17BA186E6340206345BE29677A3</string>
+			<string>4033D493D3259CA7B028DCCDF0602803</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>0696482E1ED0BE7008B9F959D1CBC9CE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MJRefreshAutoNormalFooter.m</string>
-			<key>path</key>
-			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>06A3A61FB954C0D23496486A3C414AC8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MJRefreshBackFooter.h</string>
-			<key>path</key>
-			<string>MJRefresh/Base/MJRefreshBackFooter.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>07A618B5FDE3BDD91FA101B56D272F2F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EMMessage.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/EMMessage.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>07DCECE95AF81CEFEEE79180AAA6F58B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>MJRefresh.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>08734843703653BDED6EA43341D139D0</key>
+		<key>06F2833CE1189AFA02757B7712EEC712</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>D3F64BD27E3203893A9DDCC8137EB33A</string>
+				<string>D620D027ED38FC5266B18237ACA94B19</string>
+				<string>27170715EA8B8B800B8F3E1AEDA4C74E</string>
+				<string>2D3A78269A3577F0E4F54567165AA9A7</string>
+				<string>1EF7ECA07B98A97030292EC036E44427</string>
+				<string>9AD2E7AAA59719A084512705C89A89AD</string>
+				<string>FC3FE1C7B6DCD2D912C226E63B4CAF3A</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Resources</string>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/MJRefresh</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>0A5381B060E29A591C2818C3D750A830</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2F05FDC72E415DD521983A7D0D64AE1B</string>
+			<string>92ACAD75E6955C0DA31D2FC1B8D79556</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -181,22 +160,22 @@
 				</array>
 			</dict>
 		</dict>
-		<key>0BDC1D11ADAE169A12A66F6E126A5D17</key>
+		<key>0E2A37F247E8B1C70BE84F9DD51A193E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>IEMContactManager.h</string>
+			<string>MJRefreshConst.m</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/IEMContactManager.h</string>
+			<string>MJRefresh/MJRefreshConst.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0E052857527A9CE55FAB29F3DA39E40E</key>
+		<key>0F4C42E939D381FB51A53E63ACB4E365</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -205,16 +184,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MJRefreshGifHeader.h</string>
+			<string>EMCallSession.h</string>
 			<key>path</key>
-			<string>MJRefresh/Custom/Header/MJRefreshGifHeader.h</string>
+			<string>HyphenateFullSDK/include/EMCallSession.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>117AA90B470414D78409D251DDC2680E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>007BF149219CE3B166E8AEC6A6C81732</string>
+			<string>E95BFD662EE4458444172BFE1196BE28</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -234,26 +213,26 @@
 		<key>120DBBCD8754BA8A78772632C9A11523</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F30AA79A7D0D9C45E02FC04D693F225F</string>
+			<string>FC098B4FE10287E39F8E44D9BD7997C8</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>1A2AE01A9744DAA8FA04C050DEA1DF0D</key>
+		<key>170350AEA29B7B232E420718555B7B5D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>NSBundle+MJRefresh.m</string>
+			<string>EMImageMessageBody.h</string>
 			<key>path</key>
-			<string>MJRefresh/NSBundle+MJRefresh.m</string>
+			<string>HyphenateFullSDK/include/EMImageMessageBody.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1AB468561D7F2AB459AA3D03E2677514</key>
+		<key>194EE3B49359F23944777CAF4F2E0287</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -262,16 +241,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MJRefreshBackGifFooter.m</string>
+			<string>UIView+MJExtension.m</string>
 			<key>path</key>
-			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.m</string>
+			<string>MJRefresh/UIView+MJExtension.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>1C0ED70A2033A43418736E5456088002</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D380F02B38EDDBC397F3F99CE52C1600</string>
+			<string>5BFBF18BCADB727BF47062577A32607F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -282,25 +261,10 @@
 				</array>
 			</dict>
 		</dict>
-		<key>1C4E8FAC5AB7521E55B5424DF3EDAC79</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MJRefresh.h</string>
-			<key>path</key>
-			<string>MJRefresh/MJRefresh.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>1C89EEA41844D270903757D64A202F68</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0E052857527A9CE55FAB29F3DA39E40E</string>
+			<string>CDAEDA72347BB1D0AAF9474C09A3124A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -314,37 +278,46 @@
 		<key>1E451233076F69EA16C8CC764253241C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7EA72D10AC2796FDEE59860EB8F2B8B1</string>
+			<string>1EF7ECA07B98A97030292EC036E44427</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>235D233261A653EBFD1696555DC0EB5D</key>
+		<key>1EF7ECA07B98A97030292EC036E44427</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MJRefreshAutoGifFooter.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h</string>
+			<string>MJRefresh-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>24D712830D2C0BA45C31C15495A49551</key>
+		<key>27170715EA8B8B800B8F3E1AEDA4C74E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>MJRefresh.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>27E6BF42A380216D74A82E54D8A3D575</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>EMPushOptions.h</string>
+			<string>MJRefreshBackGifFooter.m</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMPushOptions.h</string>
+			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -374,36 +347,6 @@
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
-		<key>2A21CE414D21E8C9A42A20BA051CB019</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EMClientDelegate.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/EMClientDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2B9BE6F01393FA1536515F147DB3D9BD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MJRefreshStateHeader.m</string>
-			<key>path</key>
-			<string>MJRefresh/Custom/Header/MJRefreshStateHeader.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>2BCC458FDD5F692BBB2BFC64BB5701FC</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -417,33 +360,16 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2D0F2B146592C6138293C016831AF3D9</key>
+		<key>2D3A78269A3577F0E4F54567165AA9A7</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EMChatroom.h</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMChatroom.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2D67157E56F8B3C3EDB60C6BC11CDC27</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>archive.ar</string>
-			<key>name</key>
-			<string>libHyphenateFullSDK.a</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/lib/libHyphenateFullSDK.a</string>
+			<string>MJRefresh.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -461,38 +387,10 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>2EDDE6FA94F3CDEB84D9454C1032E011</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>MJRefresh.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2F05FDC72E415DD521983A7D0D64AE1B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MJRefreshBackGifFooter.h</string>
-			<key>path</key>
-			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>2F55E619D1FFE8CE972570D407D22AEE</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>2EDDE6FA94F3CDEB84D9454C1032E011</string>
+			<string>2D3A78269A3577F0E4F54567165AA9A7</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -548,9 +446,54 @@
 		<key>31F2A2FB41C8027C07A780C821DA378D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E53B42E35CD6B87C2EF6915561CF1A8A</string>
+			<string>F280D8B9953E321965CD40B70A00DFEE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>321B289B6B7859AFE05D6F461258AA21</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshNormalHeader.m</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Header/MJRefreshNormalHeader.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>329C717AEF1D4ED81DF69A942FB766F8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMMessageBody.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMMessageBody.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>33E38D434BFC1C6C9B9AE5A7B34F4B87</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshAutoNormalFooter.m</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>3401C65E84CEEC29B31B547FF0334C1B</key>
 		<dict>
@@ -588,7 +531,7 @@
 		<key>352516B216CBE1236787DA1550FB37DD</key>
 		<dict>
 			<key>fileRef</key>
-			<string>1C4E8FAC5AB7521E55B5424DF3EDAC79</string>
+			<string>0615242873B798B139B82D79D1A0C8CF</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -599,63 +542,16 @@
 				</array>
 			</dict>
 		</dict>
-		<key>37F5C7B43C8E4915C547B6CC1C15E4F4</key>
+		<key>3DA304F479919868E0FF7331B5C6B82D</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>601E2199EA20E21326DD6BC61E8FBE46</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>MJRefreshGifHeader.m</string>
-			<key>path</key>
-			<string>MJRefresh/Custom/Header/MJRefreshGifHeader.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3899EEC06F87840B616051CE2A3AFA14</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EMOptions.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/EMOptions.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3B01D8A5F222098C5003C69FD279A500</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IEMChatManager.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/IEMChatManager.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C094802E4207579CF3E6F23B3DAAD98</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MJRefreshAutoStateFooter.h</string>
-			<key>path</key>
-			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.h</string>
+			<string>Frameworks</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -672,23 +568,10 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>3E844B7AE73DA642E8A8D8F3E69ADE96</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MJRefresh-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>3EB9B999182108FCDEDEBC089EC9AB7A</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>2EDDE6FA94F3CDEB84D9454C1032E011</string>
+			<string>2D3A78269A3577F0E4F54567165AA9A7</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -741,10 +624,25 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>3ED7B14828E05A53BD2BCAF0A4F31A1F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMError.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMError.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>3F7D2C4D3C514DE596A96B57C472729A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EBA9840B0B57D441FC9EFAA8E63A1952</string>
+			<string>AC3FF2FE365E6A60021FF2BD51D8F47A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -758,7 +656,7 @@
 		<key>3FAADCCCAA0DEC134B5AF69F786E4EDF</key>
 		<dict>
 			<key>fileRef</key>
-			<string>915EAD7121D7AC32E22E61A78A98C166</string>
+			<string>A657C52FDAB3483FFE3615D990DC99C3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -769,22 +667,22 @@
 				</array>
 			</dict>
 		</dict>
-		<key>40AEDE543AEB0C5C5CDF03B005DD0D9F</key>
+		<key>4033D493D3259CA7B028DCCDF0602803</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MJRefreshBackStateFooter.h</string>
+			<string>MJRefreshBackStateFooter.m</string>
 			<key>path</key>
-			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.h</string>
+			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>41AAFD232077312520B8AC1A7C9E590D</key>
+		<key>40CA03625E3E9632BE49A9791C441254</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -793,20 +691,20 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MJRefreshComponent.h</string>
+			<string>EMSDKFull.h</string>
 			<key>path</key>
-			<string>MJRefresh/Base/MJRefreshComponent.h</string>
+			<string>HyphenateFullSDK/include/EMSDKFull.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>41B95B14F3CA265ADB42369D1AE175A7</key>
 		<dict>
 			<key>fileRef</key>
-			<string>8B5385E27189B99FC7BC000DB35F2789</string>
+			<string>321B289B6B7859AFE05D6F461258AA21</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>4519D20E4B4CDE22909814ED5E0F8650</key>
+		<key>46582A6C6FA1D469C84B0D9901804893</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -815,13 +713,13 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>EMChatroomManagerDelegate.h</string>
+			<string>MJRefreshBackFooter.h</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMChatroomManagerDelegate.h</string>
+			<string>MJRefresh/Base/MJRefreshBackFooter.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>46575D2255A78D8CF865F2EDC53D495C</key>
+		<key>490591EC2F8D649F2BAD7A3BD9B44208</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -830,82 +728,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>EMOptions+PrivateDeploy.h</string>
+			<string>EMPushOptions.h</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMOptions+PrivateDeploy.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4723C3899755BE2B7DA682DC533AEC35</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4751B393A263CB495957C4EE7137AA2F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8F36E2E6D0E2E15D2FA129190D16883C</string>
-				<string>E78020C399A8ED55A9C6C5010659552D</string>
-				<string>CE862D929A6483B56D1E4403B8437FB5</string>
-				<string>70A7C972CECC39B76C1284B7C6C9A42A</string>
-				<string>DA42F12CD6A5B571AF6EE4FF4A03227C</string>
-				<string>2D0F2B146592C6138293C016831AF3D9</string>
-				<string>4519D20E4B4CDE22909814ED5E0F8650</string>
-				<string>7B524C191C9D01A9B311FF4C7D152E3A</string>
-				<string>B1248B421730639FD161336825425152</string>
-				<string>2A21CE414D21E8C9A42A20BA051CB019</string>
-				<string>F37BFDF472E5D7339B2D9E16FE0A238D</string>
-				<string>B26B3B5C239AE18DEAF45AD09FB33BC0</string>
-				<string>768EB869F4DA6C8E80D22A92A93E2C34</string>
-				<string>9B689E1B8DDA614D2FB9C5187D4FBD4B</string>
-				<string>AFD9B04C7AFC9464D3B23E306E4F9525</string>
-				<string>B97D226709DACB9192DC7E923CB9F68A</string>
-				<string>78922A20F05CB4A310CB8EC321DDF1C9</string>
-				<string>AA5F98FCF94432D4678CE6845714C756</string>
-				<string>EB1EE5CAA71C7353E523D20027AC7724</string>
-				<string>D6B0C43173B61EDBBFA3F4F5F3AAB97B</string>
-				<string>F989A110E06D29E2C2041EA59C11D927</string>
-				<string>70F164A9BE518111DC955FA96236F8C7</string>
-				<string>07A618B5FDE3BDD91FA101B56D272F2F</string>
-				<string>002D80A2D80FE3ACB86F772EEB278521</string>
-				<string>3899EEC06F87840B616051CE2A3AFA14</string>
-				<string>46575D2255A78D8CF865F2EDC53D495C</string>
-				<string>24D712830D2C0BA45C31C15495A49551</string>
-				<string>9955A515B7B44074785D04AB15CBED23</string>
-				<string>ED8D062017AFAA0D4DB220F0904D6AEA</string>
-				<string>7091ADC9858415E15C5DC88F4E0D798C</string>
-				<string>ED22B44EE26EB523857C3F56533E78A6</string>
-				<string>DB9CF724345C2138D6F059E0FEAEF91A</string>
-				<string>F9FC90E99E19471207C03EC6346D03C8</string>
-				<string>3B01D8A5F222098C5003C69FD279A500</string>
-				<string>9808C31315FF3BDBCFAAC4E49D62AA30</string>
-				<string>0BDC1D11ADAE169A12A66F6E126A5D17</string>
-				<string>CAA719F0441C0BBE740AEC7BC1D7B7B2</string>
-				<string>51CFC9C5C1E7CEAC711A1EA5705EE8DB</string>
-				<string>FF210D371C9CF29D3294A76DA613DC8B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>HyphenateFullSDK</string>
-			<key>path</key>
-			<string>HyphenateFullSDK</string>
+			<string>HyphenateFullSDK/include/EMPushOptions.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>49983627B5BDD26F70342154E44D6D17</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3C094802E4207579CF3E6F23B3DAAD98</string>
+			<string>71230697AFFC6B49BA6D19A27C1AE12A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -916,7 +748,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>51CFC9C5C1E7CEAC711A1EA5705EE8DB</key>
+		<key>4B43198C84A0754AA166BFAA8E0F3920</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -925,9 +757,39 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>OpenGLView20.h</string>
+			<string>MJRefreshBackNormalFooter.h</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/OpenGLView20.h</string>
+			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4D5BD17DDBD3F3BADB95D0585714E771</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IEMGroupManager.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/IEMGroupManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4D8D1E4820AC63BDA999ECB63B7FDDFE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.plug-in</string>
+			<key>name</key>
+			<string>MJRefresh.bundle</string>
+			<key>path</key>
+			<string>MJRefresh/MJRefresh.bundle</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -937,21 +799,6 @@
 			<string>3E4E89230EF59BC255123B67864ACF77</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>51E727CF5347E71F501C146F33A5C6EA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSBundle+MJRefresh.h</string>
-			<key>path</key>
-			<string>MJRefresh/NSBundle+MJRefresh.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>5296ABD13A4F63D975FDA38C7CEB8626</key>
 		<dict>
@@ -980,7 +827,7 @@
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
-		<key>594E89B01D5A1875F6B054E08A0148A9</key>
+		<key>545F1023D66D1C2CFF697D4E093CE5C0</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -989,9 +836,39 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MJRefreshConst.h</string>
+			<string>MJRefreshBackStateFooter.h</string>
 			<key>path</key>
-			<string>MJRefresh/MJRefreshConst.h</string>
+			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>592FF7420206089E4965A1936F6D3D03</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMChatroomManagerDelegate.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMChatroomManagerDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5BFBF18BCADB727BF47062577A32607F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshAutoFooter.h</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshAutoFooter.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1071,6 +948,21 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
+		<key>5F90D465D4DC517402B644EAD5D5DE65</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshComponent.h</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshComponent.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>5FC387CF20E397E83F5A0E249772745D</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -1103,17 +995,122 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>601E2199EA20E21326DD6BC61E8FBE46</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>archive.ar</string>
+			<key>name</key>
+			<string>libHyphenateFullSDK.a</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/lib/libHyphenateFullSDK.a</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6033A4F439AE930D61A54942CA338DAC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshAutoGifFooter.m</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>633793E80ACF69FFC793732D9C2C2CCF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSBundle+MJRefresh.h</string>
+			<key>path</key>
+			<string>MJRefresh/NSBundle+MJRefresh.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>64AE037A21B6060E611BAF64D17FB3EE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E6FFC1DCF427C281123E0DCFC80D3C3F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>XXMessageUI</string>
+			<key>path</key>
+			<string>XXMessageUI</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>64E72020BAD7CB2D613B848869C301B4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IEMChatManager.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/IEMChatManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>653F0FF020EF0A00CDEDF756B029C61C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMCallRemoteView.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMCallRemoteView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>657F8E20736ACAB2FCB1B3FA7FDBDE69</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMSDK.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMSDK.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>67899B042AA76182AC1E4CAB8EBC1610</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C0E4FC617215255D2A4684FDFC4FED3C</string>
+			<string>71940A1725C7973C3707157FD3FD5F29</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>68414987AA50FDAB11213EDA57B3C6BD</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E7AFBA8996E48094437D8AAC242A25B1</string>
+			<string>B4E61F25E246EE635AD54F7DD2F838BD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1127,11 +1124,56 @@
 		<key>695194FF2E80B52F216C20ABE7377DA8</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EF90E9930D7BC35465365BDC029BEC3D</string>
+			<string>0E2A37F247E8B1C70BE84F9DD51A193E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>6CF0DABFBA8C2FD3CED0A0BA67E94A2D</key>
+		<key>6D383619FE635FECA279C55779B5F9B8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshHeader.h</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshHeader.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>70CA348BF4CB3271B448D64473BDB6C8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIScrollView+MJRefresh.h</string>
+			<key>path</key>
+			<string>MJRefresh/UIScrollView+MJRefresh.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>71230697AFFC6B49BA6D19A27C1AE12A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshAutoStateFooter.h</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>71940A1725C7973C3707157FD3FD5F29</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1140,61 +1182,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UIScrollView+MJRefresh.m</string>
+			<string>UIScrollView+MJExtension.m</string>
 			<key>path</key>
-			<string>MJRefresh/UIScrollView+MJRefresh.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7091ADC9858415E15C5DC88F4E0D798C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EMTextMessageBody.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/EMTextMessageBody.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>70A7C972CECC39B76C1284B7C6C9A42A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EMCallSession.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/EMCallSession.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>70F164A9BE518111DC955FA96236F8C7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EMLocationMessageBody.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/EMLocationMessageBody.h</string>
+			<string>MJRefresh/UIScrollView+MJExtension.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>729AA360DBD60262882C65123B3E8CA0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D6234A079AA3FD77CABDB60AE6CEBAAF</string>
+			<string>DD68E0C0B7516DFEB15669883689981E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1208,7 +1205,7 @@
 		<key>73FED5C3C00468ECD4C665B55B0D46DF</key>
 		<dict>
 			<key>fileRef</key>
-			<string>51E727CF5347E71F501C146F33A5C6EA</string>
+			<string>633793E80ACF69FFC793732D9C2C2CCF</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1229,21 +1226,6 @@
 			<string>29DD99664D189A7CA206368F493B1E0B</string>
 			<key>targetProxy</key>
 			<string>D857BDBD02FD362F8E032E9B847639FC</string>
-		</dict>
-		<key>74C93EA59483625720ECEDB9B2E4595B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIScrollView+MJRefresh.h</string>
-			<key>path</key>
-			<string>MJRefresh/UIScrollView+MJRefresh.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>75D98FF52E597A11900E131B6C4E1ADA</key>
 		<dict>
@@ -1269,7 +1251,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>768EB869F4DA6C8E80D22A92A93E2C34</key>
+		<key>76070A30C168718BA443FA07E3ABF7A5</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1278,9 +1260,39 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>EMConversation.h</string>
+			<string>EMOptions+PrivateDeploy.h</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMConversation.h</string>
+			<string>HyphenateFullSDK/include/EMOptions+PrivateDeploy.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7663BCA5C3ABF222D1D33F3DC278D384</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMFileMessageBody.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMFileMessageBody.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>76AE28835E295728811F48EB4CEB9520</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshBackFooter.m</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshBackFooter.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1297,21 +1309,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>78922A20F05CB4A310CB8EC321DDF1C9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EMFileMessageBody.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/EMFileMessageBody.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>79A9DEDC89FE8336BF5FEDAAF75BF7FC</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1326,11 +1323,11 @@
 		<key>7A9E99CDCB7A56434473EB32B9556D06</key>
 		<dict>
 			<key>fileRef</key>
-			<string>6CF0DABFBA8C2FD3CED0A0BA67E94A2D</string>
+			<string>F5ED4B7539647A4130E383D636C09ECC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>7B524C191C9D01A9B311FF4C7D152E3A</key>
+		<key>7C4A609D82F49C0EB3DA580467FD9C83</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1339,16 +1336,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>EMClient.h</string>
+			<string>EMVoiceMessageBody.h</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMClient.h</string>
+			<string>HyphenateFullSDK/include/EMVoiceMessageBody.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>7D463E699BBFEA1707732E25E0CEF058</key>
 		<dict>
 			<key>fileRef</key>
-			<string>594E89B01D5A1875F6B054E08A0148A9</string>
+			<string>8BC31B5AB710F5DD41A832B1DB30FF9D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1359,97 +1356,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
-				<string>EC1AF45C1B09D6ED68A0081E0B69438E</string>
-				<string>B30D7015EB1686C746E193710A92DE63</string>
-				<string>B7B80995527643776607AFFA75B91E24</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E4919B8735818CEC6F617C9849C76D8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1C4E8FAC5AB7521E55B5424DF3EDAC79</string>
-				<string>D380F02B38EDDBC397F3F99CE52C1600</string>
-				<string>F30AA79A7D0D9C45E02FC04D693F225F</string>
-				<string>235D233261A653EBFD1696555DC0EB5D</string>
-				<string>FF7F84C1E593A7FC610951784615FA62</string>
-				<string>EBA9840B0B57D441FC9EFAA8E63A1952</string>
-				<string>0696482E1ED0BE7008B9F959D1CBC9CE</string>
-				<string>3C094802E4207579CF3E6F23B3DAAD98</string>
-				<string>E53B42E35CD6B87C2EF6915561CF1A8A</string>
-				<string>06A3A61FB954C0D23496486A3C414AC8</string>
-				<string>A8216611321BD3CB2D5B5CB9D30130EA</string>
-				<string>2F05FDC72E415DD521983A7D0D64AE1B</string>
-				<string>1AB468561D7F2AB459AA3D03E2677514</string>
-				<string>EF5A5F3E881CC5451909FC1D26DEE5CF</string>
-				<string>051001A95DE38B15B5183CB83CDF3C09</string>
-				<string>40AEDE543AEB0C5C5CDF03B005DD0D9F</string>
-				<string>9784B17BA186E6340206345BE29677A3</string>
-				<string>41AAFD232077312520B8AC1A7C9E590D</string>
-				<string>CC4D9CBBEDFB53A076447B5C541A498A</string>
-				<string>594E89B01D5A1875F6B054E08A0148A9</string>
-				<string>EF90E9930D7BC35465365BDC029BEC3D</string>
-				<string>915EAD7121D7AC32E22E61A78A98C166</string>
-				<string>AD50865854DE3B3A8DD3D8A96919088A</string>
-				<string>0E052857527A9CE55FAB29F3DA39E40E</string>
-				<string>37F5C7B43C8E4915C547B6CC1C15E4F4</string>
-				<string>A53A9E3A984DB6D497E67D40C140AF4A</string>
-				<string>007BF149219CE3B166E8AEC6A6C81732</string>
-				<string>84C6551662B92A7C68DCBEA79E4F5B70</string>
-				<string>8B5385E27189B99FC7BC000DB35F2789</string>
-				<string>B1698D300F3405A0561D1BDB6FF44BCD</string>
-				<string>2B9BE6F01393FA1536515F147DB3D9BD</string>
-				<string>51E727CF5347E71F501C146F33A5C6EA</string>
-				<string>1A2AE01A9744DAA8FA04C050DEA1DF0D</string>
-				<string>E7AFBA8996E48094437D8AAC242A25B1</string>
-				<string>C0E4FC617215255D2A4684FDFC4FED3C</string>
-				<string>74C93EA59483625720ECEDB9B2E4595B</string>
-				<string>6CF0DABFBA8C2FD3CED0A0BA67E94A2D</string>
-				<string>D6234A079AA3FD77CABDB60AE6CEBAAF</string>
-				<string>0258A1E3772D652C3822A0B2BA3D9609</string>
-				<string>08734843703653BDED6EA43341D139D0</string>
-				<string>FC2BEE008843167526FCA0BA486F2E29</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>MJRefresh</string>
-			<key>path</key>
-			<string>MJRefresh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EA72D10AC2796FDEE59860EB8F2B8B1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>MJRefresh-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>836FE431F2865ACC3D940FFA0F4D0244</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A2AE01A9744DAA8FA04C050DEA1DF0D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>84C6551662B92A7C68DCBEA79E4F5B70</key>
+		<key>7DAAF9146D682D8C351187D6844C1AD4</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1458,9 +1365,136 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MJRefreshNormalHeader.h</string>
+			<string>EMErrorCode.h</string>
 			<key>path</key>
-			<string>MJRefresh/Custom/Header/MJRefreshNormalHeader.h</string>
+			<string>HyphenateFullSDK/include/EMErrorCode.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
+				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
+				<string>CEDA3AA496A4FA5B7426440626ED0E1D</string>
+				<string>B30D7015EB1686C746E193710A92DE63</string>
+				<string>B7B80995527643776607AFFA75B91E24</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7E2BFC232095E5DED727F8853977444C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMChatroom.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMChatroom.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7EB144297C8B7BE2CDF23FA4C19A0BD4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSBundle+MJRefresh.m</string>
+			<key>path</key>
+			<string>MJRefresh/NSBundle+MJRefresh.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7ED489CB939F5EB14705380ED22A4518</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMConversation.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMConversation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8024FD9979114B8BE55816C73DFEE40B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMGroupOptions.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMGroupOptions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8049F37CEC6081645E3F106DBC03B1E4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMCallLocalView.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMCallLocalView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>807A9AE7FAAE288153B696C8AB462EA9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMLocationMessageBody.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMLocationMessageBody.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>836FE431F2865ACC3D940FFA0F4D0244</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7EB144297C8B7BE2CDF23FA4C19A0BD4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8603D1F2D96D2D24D9352ED003235071</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IEMContactManager.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/IEMContactManager.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1552,18 +1586,33 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8B5385E27189B99FC7BC000DB35F2789</key>
+		<key>89901F7AB6C9ED324D190D96CC99F376</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MJRefreshNormalHeader.m</string>
+			<string>IEMCallManager.h</string>
 			<key>path</key>
-			<string>MJRefresh/Custom/Header/MJRefreshNormalHeader.m</string>
+			<string>HyphenateFullSDK/include/IEMCallManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8BC31B5AB710F5DD41A832B1DB30FF9D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshConst.h</string>
+			<key>path</key>
+			<string>MJRefresh/MJRefreshConst.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1585,7 +1634,7 @@
 		<key>8E52A6EAA55FE7AA128EF7CBA68AB787</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B1698D300F3405A0561D1BDB6FF44BCD</string>
+			<string>A20811EC20CA40B0406252F01866DFE1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1596,7 +1645,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>8F36E2E6D0E2E15D2FA129190D16883C</key>
+		<key>92ACAD75E6955C0DA31D2FC1B8D79556</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1605,38 +1654,23 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>EMCallLocalView.h</string>
+			<string>MJRefreshBackGifFooter.h</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMCallLocalView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>915EAD7121D7AC32E22E61A78A98C166</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MJRefreshFooter.h</string>
-			<key>path</key>
-			<string>MJRefresh/Base/MJRefreshFooter.h</string>
+			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>932DB722A740818B3B6B5AEA333A84ED</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0696482E1ED0BE7008B9F959D1CBC9CE</string>
+			<string>33E38D434BFC1C6C9B9AE5A7B34F4B87</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>93852A7BBB3B9B938DD3BCED83FE104A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2B9BE6F01393FA1536515F147DB3D9BD</string>
+			<string>CF06716C97AB8EE7855797E989E2EDB7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1653,52 +1687,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9784B17BA186E6340206345BE29677A3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MJRefreshBackStateFooter.m</string>
-			<key>path</key>
-			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9808C31315FF3BDBCFAAC4E49D62AA30</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IEMChatroomManager.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/IEMChatroomManager.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9955A515B7B44074785D04AB15CBED23</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EMSDK.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/EMSDK.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9B689E1B8DDA614D2FB9C5187D4FBD4B</key>
+		<key>99070F23BA070ECDA25614D2A2369A47</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1713,7 +1702,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A08C50A808528888F5F0513BDDA9BE98</key>
+		<key>9AD2E7AAA59719A084512705C89A89AD</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1726,7 +1715,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A53A9E3A984DB6D497E67D40C140AF4A</key>
+		<key>9AFC8BA883640C337A798A95DA96A731</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1735,9 +1724,69 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MJRefreshHeader.h</string>
+			<string>EMClientDelegate.h</string>
 			<key>path</key>
-			<string>MJRefresh/Base/MJRefreshHeader.h</string>
+			<string>HyphenateFullSDK/include/EMClientDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D595599425399B721113DE43EC3D3C4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMChatManagerDelegate.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMChatManagerDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A20811EC20CA40B0406252F01866DFE1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshStateHeader.h</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Header/MJRefreshStateHeader.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A2864573DE11272344391261A208AAFB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMGroup.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMGroup.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A657C52FDAB3483FFE3615D990DC99C3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshFooter.h</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshFooter.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1814,22 +1863,7 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>A8216611321BD3CB2D5B5CB9D30130EA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MJRefreshBackFooter.m</string>
-			<key>path</key>
-			<string>MJRefresh/Base/MJRefreshBackFooter.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AA5F98FCF94432D4678CE6845714C756</key>
+		<key>A89C756C144398ACAFFC4624B8A99652</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1838,24 +1872,24 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>EMGroup.h</string>
+			<string>EMVideoMessageBody.h</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMGroup.h</string>
+			<string>HyphenateFullSDK/include/EMVideoMessageBody.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>AD50865854DE3B3A8DD3D8A96919088A</key>
+		<key>AC3FF2FE365E6A60021FF2BD51D8F47A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MJRefreshFooter.m</string>
+			<string>MJRefreshAutoNormalFooter.h</string>
 			<key>path</key>
-			<string>MJRefresh/Base/MJRefreshFooter.m</string>
+			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1875,14 +1909,14 @@
 		<key>AE4DB952079060D65C3C1BB52AE060B4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FF7F84C1E593A7FC610951784615FA62</string>
+			<string>6033A4F439AE930D61A54942CA338DAC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>AF11F133F91DECBCE102837500159A23</key>
 		<dict>
 			<key>fileRef</key>
-			<string>84C6551662B92A7C68DCBEA79E4F5B70</string>
+			<string>D4CF8A385E5CE239AD36C99AA6834FA4</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1893,7 +1927,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>AFD9B04C7AFC9464D3B23E306E4F9525</key>
+		<key>AFF92A2FCAC22EC80E77AF16C00A76DB</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1902,54 +1936,24 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>EMError.h</string>
+			<string>MJRefreshAutoGifFooter.h</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMError.h</string>
+			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B1248B421730639FD161336825425152</key>
+		<key>B0C8FC7BBF7A83EA04178447D9788753</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>EMClient+Call.h</string>
+			<string>MJRefreshBackNormalFooter.m</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMClient+Call.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B1698D300F3405A0561D1BDB6FF44BCD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MJRefreshStateHeader.h</string>
-			<key>path</key>
-			<string>MJRefresh/Custom/Header/MJRefreshStateHeader.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B26B3B5C239AE18DEAF45AD09FB33BC0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EMContactManagerDelegate.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/EMContactManagerDelegate.h</string>
+			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1967,10 +1971,55 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>B3FF481AF2C4C40808EC407E15F9A824</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMGroupManagerDelegate.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMGroupManagerDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B48DB21BF22562E054F476191306813E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMClient.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMClient.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B4E61F25E246EE635AD54F7DD2F838BD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIScrollView+MJExtension.h</string>
+			<key>path</key>
+			<string>MJRefresh/UIScrollView+MJExtension.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>B61C9E27E1905E68381F32FC8BF57A14</key>
 		<dict>
 			<key>fileRef</key>
-			<string>40AEDE543AEB0C5C5CDF03B005DD0D9F</string>
+			<string>545F1023D66D1C2CFF697D4E093CE5C0</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1980,6 +2029,21 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>B719FAD11B8EDAA5750CBA167901C836</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMOptions.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMOptions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B7B80995527643776607AFFA75B91E24</key>
 		<dict>
@@ -1994,25 +2058,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B97D226709DACB9192DC7E923CB9F68A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EMErrorCode.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/EMErrorCode.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>B99758414A9D84DEFFA23415B91DEBD1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>06A3A61FB954C0D23496486A3C414AC8</string>
+			<string>46582A6C6FA1D469C84B0D9901804893</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2022,6 +2071,21 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>BA5774B043DB7E77E4615919CD36FB71</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMCmdMessageBody.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMCmdMessageBody.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
 		<dict>
@@ -2053,17 +2117,70 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>BC5A8E222C85CBB3FB32ACC97EF9D558</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8049F37CEC6081645E3F106DBC03B1E4</string>
+				<string>DCA63005EB798F0BB1597750CC3E2B03</string>
+				<string>653F0FF020EF0A00CDEDF756B029C61C</string>
+				<string>0F4C42E939D381FB51A53E63ACB4E365</string>
+				<string>9D595599425399B721113DE43EC3D3C4</string>
+				<string>7E2BFC232095E5DED727F8853977444C</string>
+				<string>592FF7420206089E4965A1936F6D3D03</string>
+				<string>B48DB21BF22562E054F476191306813E</string>
+				<string>F3257E6671BB8266FF1C5E218CBC8157</string>
+				<string>9AFC8BA883640C337A798A95DA96A731</string>
+				<string>BA5774B043DB7E77E4615919CD36FB71</string>
+				<string>D9DE0B516C2B5488EB2E75032BC74B58</string>
+				<string>7ED489CB939F5EB14705380ED22A4518</string>
+				<string>99070F23BA070ECDA25614D2A2369A47</string>
+				<string>3ED7B14828E05A53BD2BCAF0A4F31A1F</string>
+				<string>7DAAF9146D682D8C351187D6844C1AD4</string>
+				<string>7663BCA5C3ABF222D1D33F3DC278D384</string>
+				<string>A2864573DE11272344391261A208AAFB</string>
+				<string>B3FF481AF2C4C40808EC407E15F9A824</string>
+				<string>8024FD9979114B8BE55816C73DFEE40B</string>
+				<string>170350AEA29B7B232E420718555B7B5D</string>
+				<string>807A9AE7FAAE288153B696C8AB462EA9</string>
+				<string>EED9112D12842A77B87BD36A199FC6F8</string>
+				<string>329C717AEF1D4ED81DF69A942FB766F8</string>
+				<string>B719FAD11B8EDAA5750CBA167901C836</string>
+				<string>76070A30C168718BA443FA07E3ABF7A5</string>
+				<string>490591EC2F8D649F2BAD7A3BD9B44208</string>
+				<string>657F8E20736ACAB2FCB1B3FA7FDBDE69</string>
+				<string>40CA03625E3E9632BE49A9791C441254</string>
+				<string>03B25B5F9ED76548AE1C2090493AF733</string>
+				<string>A89C756C144398ACAFFC4624B8A99652</string>
+				<string>7C4A609D82F49C0EB3DA580467FD9C83</string>
+				<string>89901F7AB6C9ED324D190D96CC99F376</string>
+				<string>64E72020BAD7CB2D613B848869C301B4</string>
+				<string>F1B728631B38242D1E17D2465E1B6818</string>
+				<string>8603D1F2D96D2D24D9352ED003235071</string>
+				<string>4D5BD17DDBD3F3BADB95D0585714E771</string>
+				<string>CD0872DE7316670278EBD41EA28A491C</string>
+				<string>3DA304F479919868E0FF7331B5C6B82D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>HyphenateFullSDK</string>
+			<key>path</key>
+			<string>HyphenateFullSDK</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>BE613E449FAACAC71A5761CBC218359E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0258A1E3772D652C3822A0B2BA3D9609</string>
+			<string>194EE3B49359F23944777CAF4F2E0287</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>BEF394E84E6267BFEE6E33F1C4520C01</key>
 		<dict>
 			<key>fileRef</key>
-			<string>41AAFD232077312520B8AC1A7C9E590D</string>
+			<string>5F90D465D4DC517402B644EAD5D5DE65</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2087,18 +2204,58 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C0E4FC617215255D2A4684FDFC4FED3C</key>
+		<key>C4A4A132E4715722449C62DB3CE456D2</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>0615242873B798B139B82D79D1A0C8CF</string>
+				<string>5BFBF18BCADB727BF47062577A32607F</string>
+				<string>FC098B4FE10287E39F8E44D9BD7997C8</string>
+				<string>AFF92A2FCAC22EC80E77AF16C00A76DB</string>
+				<string>6033A4F439AE930D61A54942CA338DAC</string>
+				<string>AC3FF2FE365E6A60021FF2BD51D8F47A</string>
+				<string>33E38D434BFC1C6C9B9AE5A7B34F4B87</string>
+				<string>71230697AFFC6B49BA6D19A27C1AE12A</string>
+				<string>F280D8B9953E321965CD40B70A00DFEE</string>
+				<string>46582A6C6FA1D469C84B0D9901804893</string>
+				<string>76AE28835E295728811F48EB4CEB9520</string>
+				<string>92ACAD75E6955C0DA31D2FC1B8D79556</string>
+				<string>27E6BF42A380216D74A82E54D8A3D575</string>
+				<string>4B43198C84A0754AA166BFAA8E0F3920</string>
+				<string>B0C8FC7BBF7A83EA04178447D9788753</string>
+				<string>545F1023D66D1C2CFF697D4E093CE5C0</string>
+				<string>4033D493D3259CA7B028DCCDF0602803</string>
+				<string>5F90D465D4DC517402B644EAD5D5DE65</string>
+				<string>052505C3B1AD99183253FA5E27B70D7D</string>
+				<string>8BC31B5AB710F5DD41A832B1DB30FF9D</string>
+				<string>0E2A37F247E8B1C70BE84F9DD51A193E</string>
+				<string>A657C52FDAB3483FFE3615D990DC99C3</string>
+				<string>02BA3C247CD76EA4E2F8D897079E3129</string>
+				<string>CDAEDA72347BB1D0AAF9474C09A3124A</string>
+				<string>052736766B5CAAAFAB61FB4E64CD8E47</string>
+				<string>6D383619FE635FECA279C55779B5F9B8</string>
+				<string>E95BFD662EE4458444172BFE1196BE28</string>
+				<string>D4CF8A385E5CE239AD36C99AA6834FA4</string>
+				<string>321B289B6B7859AFE05D6F461258AA21</string>
+				<string>A20811EC20CA40B0406252F01866DFE1</string>
+				<string>CF06716C97AB8EE7855797E989E2EDB7</string>
+				<string>633793E80ACF69FFC793732D9C2C2CCF</string>
+				<string>7EB144297C8B7BE2CDF23FA4C19A0BD4</string>
+				<string>B4E61F25E246EE635AD54F7DD2F838BD</string>
+				<string>71940A1725C7973C3707157FD3FD5F29</string>
+				<string>70CA348BF4CB3271B448D64473BDB6C8</string>
+				<string>F5ED4B7539647A4130E383D636C09ECC</string>
+				<string>DD68E0C0B7516DFEB15669883689981E</string>
+				<string>194EE3B49359F23944777CAF4F2E0287</string>
+				<string>010D417D9721714F38CAA2A3DA3E94D4</string>
+				<string>06F2833CE1189AFA02757B7712EEC712</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>UIScrollView+MJExtension.m</string>
+			<string>MJRefresh</string>
 			<key>path</key>
-			<string>MJRefresh/UIScrollView+MJExtension.m</string>
+			<string>MJRefresh</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2112,24 +2269,9 @@
 		<key>C85667E5737BEE47D9760602F56DE8FD</key>
 		<dict>
 			<key>fileRef</key>
-			<string>051001A95DE38B15B5183CB83CDF3C09</string>
+			<string>B0C8FC7BBF7A83EA04178447D9788753</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAA719F0441C0BBE740AEC7BC1D7B7B2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IEMGroupManager.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/IEMGroupManager.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>CBC0F7C552B739C909B650A0F42F7F38</key>
 		<dict>
@@ -2144,22 +2286,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CC4D9CBBEDFB53A076447B5C541A498A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MJRefreshComponent.m</string>
-			<key>path</key>
-			<string>MJRefresh/Base/MJRefreshComponent.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CE862D929A6483B56D1E4403B8437FB5</key>
+		<key>CD0872DE7316670278EBD41EA28A491C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2168,9 +2295,54 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>EMCallRemoteView.h</string>
+			<string>OpenGLView20.h</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMCallRemoteView.h</string>
+			<string>HyphenateFullSDK/include/OpenGLView20.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDAEDA72347BB1D0AAF9474C09A3124A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshGifHeader.h</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Header/MJRefreshGifHeader.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CEDA3AA496A4FA5B7426440626ED0E1D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BC5A8E222C85CBB3FB32ACC97EF9D558</string>
+				<string>C4A4A132E4715722449C62DB3CE456D2</string>
+				<string>64AE037A21B6060E611BAF64D17FB3EE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CF06716C97AB8EE7855797E989E2EDB7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshStateHeader.m</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Header/MJRefreshStateHeader.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2200,36 +2372,6 @@
 			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
-		</dict>
-		<key>D380F02B38EDDBC397F3F99CE52C1600</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MJRefreshAutoFooter.h</string>
-			<key>path</key>
-			<string>MJRefresh/Base/MJRefreshAutoFooter.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D3F64BD27E3203893A9DDCC8137EB33A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.plug-in</string>
-			<key>name</key>
-			<string>MJRefresh.bundle</string>
-			<key>path</key>
-			<string>MJRefresh/MJRefresh.bundle</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D41D8CD98F00B204E9800998ECF8427E</key>
 		<dict>
@@ -2270,7 +2412,7 @@
 				<string>5296ABD13A4F63D975FDA38C7CEB8626</string>
 			</array>
 		</dict>
-		<key>D6234A079AA3FD77CABDB60AE6CEBAAF</key>
+		<key>D4CF8A385E5CE239AD36C99AA6834FA4</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2279,24 +2421,22 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>UIView+MJExtension.h</string>
+			<string>MJRefreshNormalHeader.h</string>
 			<key>path</key>
-			<string>MJRefresh/UIView+MJExtension.h</string>
+			<string>MJRefresh/Custom/Header/MJRefreshNormalHeader.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D6B0C43173B61EDBBFA3F4F5F3AAB97B</key>
+		<key>D620D027ED38FC5266B18237ACA94B19</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EMGroupOptions.h</string>
+			<string>text.plist.xml</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMGroupOptions.h</string>
+			<string>Info.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2313,6 +2453,21 @@
 			<key>remoteInfo</key>
 			<string>MJRefresh</string>
 		</dict>
+		<key>D9DE0B516C2B5488EB2E75032BC74B58</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EMContactManagerDelegate.h</string>
+			<key>path</key>
+			<string>HyphenateFullSDK/include/EMContactManagerDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>DA312349A49333542E6F4B36B329960E</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2326,7 +2481,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>DA42F12CD6A5B571AF6EE4FF4A03227C</key>
+		<key>DCA63005EB798F0BB1597750CC3E2B03</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2335,31 +2490,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>EMChatManagerDelegate.h</string>
+			<string>EMCallManagerDelegate.h</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMChatManagerDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DB9CF724345C2138D6F059E0FEAEF91A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EMVoiceMessageBody.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/EMVoiceMessageBody.h</string>
+			<string>HyphenateFullSDK/include/EMCallManagerDelegate.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>DCCE43312475EEB374D4D72253F719AF</key>
 		<dict>
 			<key>fileRef</key>
-			<string>AD50865854DE3B3A8DD3D8A96919088A</string>
+			<string>02BA3C247CD76EA4E2F8D897079E3129</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -2376,6 +2516,21 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>DD68E0C0B7516DFEB15669883689981E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIView+MJExtension.h</string>
+			<key>path</key>
+			<string>MJRefresh/UIView+MJExtension.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>E153E57194F505FD2E641DD2FC9C0AB4</key>
 		<dict>
@@ -2395,7 +2550,7 @@
 		<key>E2719BDE6E07AC03B31F709109C14457</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3E844B7AE73DA642E8A8D8F3E69ADE96</string>
+			<string>FC3FE1C7B6DCD2D912C226E63B4CAF3A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2413,25 +2568,10 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>E53B42E35CD6B87C2EF6915561CF1A8A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MJRefreshAutoStateFooter.m</string>
-			<key>path</key>
-			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>E6EC71B596B09BC3C233B62076DB2C47</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EF5A5F3E881CC5451909FC1D26DEE5CF</string>
+			<string>4B43198C84A0754AA166BFAA8E0F3920</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2442,7 +2582,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>E78020C399A8ED55A9C6C5010659552D</key>
+		<key>E6FFC1DCF427C281123E0DCFC80D3C3F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2451,24 +2591,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>EMCallManagerDelegate.h</string>
+			<string>MessageUIBridgingHeader.h</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMCallManagerDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E7AFBA8996E48094437D8AAC242A25B1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIScrollView+MJExtension.h</string>
-			<key>path</key>
-			<string>MJRefresh/UIScrollView+MJExtension.h</string>
+			<string>XXEaseUI/MessageUI/MessageUIBridgingHeader.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2501,7 +2626,7 @@
 		<key>E8AFE781E6AF629767731EF18E1037D9</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A53A9E3A984DB6D497E67D40C140AF4A</string>
+			<string>6D383619FE635FECA279C55779B5F9B8</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2512,72 +2637,43 @@
 				</array>
 			</dict>
 		</dict>
+		<key>E95BFD662EE4458444172BFE1196BE28</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshHeader.m</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshHeader.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>E97C0B2496B88DDF8654296698B167FF</key>
 		<dict>
 			<key>fileRef</key>
-			<string>CC4D9CBBEDFB53A076447B5C541A498A</string>
+			<string>052505C3B1AD99183253FA5E27B70D7D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>EAE9625E2630414CFEBA58BE6F1B02CB</key>
 		<dict>
 			<key>fileRef</key>
-			<string>1AB468561D7F2AB459AA3D03E2677514</string>
+			<string>27E6BF42A380216D74A82E54D8A3D575</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>EB1EE5CAA71C7353E523D20027AC7724</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EMGroupManagerDelegate.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/EMGroupManagerDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EBA9840B0B57D441FC9EFAA8E63A1952</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MJRefreshAutoNormalFooter.h</string>
-			<key>path</key>
-			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EC1AF45C1B09D6ED68A0081E0B69438E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4751B393A263CB495957C4EE7137AA2F</string>
-				<string>7E4919B8735818CEC6F617C9849C76D8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>EC204EF24C2630CA30F965B9E84E8952</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A8216611321BD3CB2D5B5CB9D30130EA</string>
+			<string>76AE28835E295728811F48EB4CEB9520</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>ED22B44EE26EB523857C3F56533E78A6</key>
+		<key>EED9112D12842A77B87BD36A199FC6F8</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2586,13 +2682,13 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>EMVideoMessageBody.h</string>
+			<string>EMMessage.h</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMVideoMessageBody.h</string>
+			<string>HyphenateFullSDK/include/EMMessage.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>ED8D062017AFAA0D4DB220F0904D6AEA</key>
+		<key>F1B728631B38242D1E17D2465E1B6818</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2601,28 +2697,13 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>EMSDKFull.h</string>
+			<string>IEMChatroomManager.h</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMSDKFull.h</string>
+			<string>HyphenateFullSDK/include/IEMChatroomManager.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>EF5A5F3E881CC5451909FC1D26DEE5CF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MJRefreshBackNormalFooter.h</string>
-			<key>path</key>
-			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EF90E9930D7BC35465365BDC029BEC3D</key>
+		<key>F280D8B9953E321965CD40B70A00DFEE</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2631,28 +2712,13 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MJRefreshConst.m</string>
+			<string>MJRefreshAutoStateFooter.m</string>
 			<key>path</key>
-			<string>MJRefresh/MJRefreshConst.m</string>
+			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F30AA79A7D0D9C45E02FC04D693F225F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MJRefreshAutoFooter.m</string>
-			<key>path</key>
-			<string>MJRefresh/Base/MJRefreshAutoFooter.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F37BFDF472E5D7339B2D9E16FE0A238D</key>
+		<key>F3257E6671BB8266FF1C5E218CBC8157</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2661,9 +2727,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>EMCmdMessageBody.h</string>
+			<string>EMClient+Call.h</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMCmdMessageBody.h</string>
+			<string>HyphenateFullSDK/include/EMClient+Call.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2680,42 +2746,27 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>F989A110E06D29E2C2041EA59C11D927</key>
+		<key>F5ED4B7539647A4130E383D636C09ECC</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>EMImageMessageBody.h</string>
+			<string>UIScrollView+MJRefresh.m</string>
 			<key>path</key>
-			<string>HyphenateFullSDK/include/EMImageMessageBody.h</string>
+			<string>MJRefresh/UIScrollView+MJRefresh.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>F9913A731F998EE9B5F98AC84FB1E5B1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D3F64BD27E3203893A9DDCC8137EB33A</string>
+			<string>4D8D1E4820AC63BDA999ECB63B7FDDFE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>F9FC90E99E19471207C03EC6346D03C8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IEMCallManager.h</string>
-			<key>path</key>
-			<string>HyphenateFullSDK/include/IEMCallManager.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>FB45FFD90572718D82AB9092B750F0CA</key>
 		<dict>
@@ -2785,30 +2836,38 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>FC2BEE008843167526FCA0BA486F2E29</key>
+		<key>FC098B4FE10287E39F8E44D9BD7997C8</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>4723C3899755BE2B7DA682DC533AEC35</string>
-				<string>07DCECE95AF81CEFEEE79180AAA6F58B</string>
-				<string>2EDDE6FA94F3CDEB84D9454C1032E011</string>
-				<string>7EA72D10AC2796FDEE59860EB8F2B8B1</string>
-				<string>A08C50A808528888F5F0513BDDA9BE98</string>
-				<string>3E844B7AE73DA642E8A8D8F3E69ADE96</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>Support Files</string>
+			<string>MJRefreshAutoFooter.m</string>
 			<key>path</key>
-			<string>../Target Support Files/MJRefresh</string>
+			<string>MJRefresh/Base/MJRefreshAutoFooter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FC3FE1C7B6DCD2D912C226E63B4CAF3A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MJRefresh-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>FCB6FE76B3DBEA3A0959B714115C876B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>74C93EA59483625720ECEDB9B2E4595B</string>
+			<string>70CA348BF4CB3271B448D64473BDB6C8</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2831,34 +2890,6 @@
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
-		</dict>
-		<key>FF210D371C9CF29D3294A76DA613DC8B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2D67157E56F8B3C3EDB60C6BC11CDC27</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FF7F84C1E593A7FC610951784615FA62</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MJRefreshAutoGifFooter.m</string>
-			<key>path</key>
-			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
