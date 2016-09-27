@@ -20,10 +20,10 @@
 		5693E6D41D9A2167001813AD /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5693E6D31D9A2167001813AD /* libstdc++.6.0.9.tbd */; };
 		5693E6D61D9A218E001813AD /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5693E6D51D9A218E001813AD /* libc++.tbd */; };
 		5693E6D81D9A2195001813AD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5693E6D71D9A2195001813AD /* libz.tbd */; };
+		5693E6DA1D9A25F4001813AD /* ChatListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5693E6D91D9A25F4001813AD /* ChatListCell.xib */; };
 		56ACA6A51D824CD400C5F857 /* EaseUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ACA6A41D824CD400C5F857 /* EaseUI.m */; };
 		56ACA6A71D824D0300C5F857 /* MJRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ACA6A61D824D0300C5F857 /* MJRefreshExtensions.swift */; };
 		56ACA6AB1D82797700C5F857 /* MWPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 56ACA6AA1D82797700C5F857 /* MWPhotoBrowser.bundle */; };
-		56ACA6AD1D82798200C5F857 /* ChatListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56ACA6AC1D82798200C5F857 /* ChatListCell.xib */; };
 		56C761E51D813FE600908639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C761E41D813FE600908639 /* AppDelegate.swift */; };
 		56C761E71D813FE600908639 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C761E61D813FE600908639 /* ViewController.swift */; };
 		56C761EA1D813FE600908639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56C761E81D813FE600908639 /* Main.storyboard */; };
@@ -213,12 +213,12 @@
 		5693E6D31D9A2167001813AD /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		5693E6D51D9A218E001813AD /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		5693E6D71D9A2195001813AD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5693E6D91D9A25F4001813AD /* ChatListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatListCell.xib; sourceTree = "<group>"; };
 		56ACA6A11D823F7200C5F857 /* MessageUIBridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageUIBridgingHeader.h; sourceTree = "<group>"; };
 		56ACA6A31D824CD400C5F857 /* EaseUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseUI.h; sourceTree = "<group>"; };
 		56ACA6A41D824CD400C5F857 /* EaseUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseUI.m; sourceTree = "<group>"; };
 		56ACA6A61D824D0300C5F857 /* MJRefreshExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJRefreshExtensions.swift; sourceTree = "<group>"; };
 		56ACA6AA1D82797700C5F857 /* MWPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MWPhotoBrowser.bundle; sourceTree = "<group>"; };
-		56ACA6AC1D82798200C5F857 /* ChatListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatListCell.xib; sourceTree = "<group>"; };
 		56C761E11D813FE600908639 /* XXEaseUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XXEaseUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C761E41D813FE600908639 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56C761E61D813FE600908639 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -996,7 +996,6 @@
 		56C763091D81437600908639 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				56ACA6AC1D82798200C5F857 /* ChatListCell.xib */,
 				56C7630A1D81437600908639 /* contact */,
 				56C7630D1D81437600908639 /* conversation */,
 				56C763401D81437600908639 /* conversationList */,
@@ -1124,6 +1123,7 @@
 		56C763711D81437600908639 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				5693E6D91D9A25F4001813AD /* ChatListCell.xib */,
 				56725D761D880B6E0015D9A5 /* libopencore-amrnb.a */,
 				56725D771D880B6E0015D9A5 /* libopencore-amrwb.a */,
 				56ACA6AA1D82797700C5F857 /* MWPhotoBrowser.bundle */,
@@ -1312,9 +1312,9 @@
 				56C761EF1D813FE600908639 /* LaunchScreen.storyboard in Resources */,
 				56C764031D81437600908639 /* EaseUIResource.bundle in Resources */,
 				56C761EC1D813FE600908639 /* Assets.xcassets in Resources */,
+				5693E6DA1D9A25F4001813AD /* ChatListCell.xib in Resources */,
 				56C761EA1D813FE600908639 /* Main.storyboard in Resources */,
 				56ACA6AB1D82797700C5F857 /* MWPhotoBrowser.bundle in Resources */,
-				56ACA6AD1D82798200C5F857 /* ChatListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
