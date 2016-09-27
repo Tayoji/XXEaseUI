@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "XXChatUI"
-s.version      = "1.0.7"
+s.version      = "1.0.8"
 s.summary      = "修车人聊天系统"
 s.homepage     = "https://github.com/Tayoji/XXEaseUI"
 #s.screenshots  = "https://raw.githubusercontent.com/vikmeup/SCPopUpView/master/errorScreenshot.png", "https://raw.githubusercontent.com/vikmeup/SCPopUpView/master/successScreenshot.png"
@@ -14,7 +14,10 @@ s.source_files  = "XXEaseUI/ChatUI/EMUIKit/**/*.{h,m,a}"
 s.resources     = "XXEaseUI/ChatUI/resources/*.{a,bundle}"
 #s.framework  = 'HyphenateFullSDK'
 s.requires_arc = true
-s.dependency  'HyphenateFullSDK'
+s.frameworks   = 'CoreMedia', 'AudioToolbox', 'AVFoundation', 'ImageIO', 'MobileCoreServices'
+s.libraries    = 'iconv', 'c++', 'z', 'sqlite3', 'stdc++.6.0.9'
+s.vendored_libraries = ['ChatUI/EMUIKit/3rdparty/HyphenateFullSDK/lib/libHyphenateFullSDK.a']
+s.xcconfig     = {'OTHER_LDFLAGS' => '-ObjC'}
 s.dependency  'MJRefresh'
 
 end
