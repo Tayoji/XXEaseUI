@@ -18,11 +18,11 @@ class PromptManager: NSObject {
     
     internal static let instance = PromptManager()
     
-    private override init(){
+    fileprivate override init(){
     
     }
     
-    func play(message:EMMessage){
+    func play(_ message:EMMessage){
         if voiceState! && self.conversationId != message.conversationId{
             AudioServicesPlaySystemSound(1007)
         }
@@ -31,20 +31,20 @@ class PromptManager: NSObject {
         }
         addNotification(message)
     }
-    func addNotification(message:EMMessage) {
-        let con = EMClient.sharedClient().chatManager.getConversation(message.conversationId, type: EMConversationTypeChat, createIfNotExist: true)
-        con.isNotice()
+    func addNotification(_ message:EMMessage) {
+        let con = EMClient.shared().chatManager.getConversation(message.conversationId, type: EMConversationTypeChat, createIfNotExist: true)
+        con?.isNotice()
         let localNoti = UILocalNotification()
-        let fireDate = NSDate().dateByAddingTimeInterval(-15*60)
+        let fireDate = Date().addingTimeInterval(-15*60)
         localNoti.fireDate = fireDate
-        localNoti.timeZone = NSTimeZone.defaultTimeZone()
-        localNoti.alertBody = "\(con.nickname):\(message.showText)"
+        localNoti.timeZone = TimeZone.current
+        localNoti.alertBody = "\(con?.nickname):\(message.showText)"
         localNoti.soundName = UILocalNotificationDefaultSoundName
         localNoti.alertAction = "打开应用"
         if let ext = message.ext{
             localNoti.userInfo = ext
         }
-        UIApplication.sharedApplication().scheduleLocalNotification(localNoti)
+        UIApplication.shared.scheduleLocalNotification(localNoti)
     }
 
 }

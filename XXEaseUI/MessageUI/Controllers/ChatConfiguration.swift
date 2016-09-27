@@ -10,15 +10,15 @@ import Foundation
 import UIKit
 extension EaseChatListController:UITableViewDelegate{
 
-    func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
         return "删除"
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 72.0
     }
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
 //        if isNotices{
 //            let vc = mainSB.instantiateViewControllerWithIdentifier("MessageDetailController") as! MessageDetailController
 //            vc.conversationModel = conversations[indexPath.row]
@@ -42,7 +42,7 @@ extension EaseChatDetailsController{
         self.setRightItem()
     }
     func setRightItem(){
-        self.setRightItemImage(UIImage(named: "EaseUIResource.bundle/moreMenu/more_icon"), selectImage: UIImage(named: "EaseUIResource.bundle/moreMenu/more-xiaoxi_icon")) {
+        self.setRightItemImage(UIImage(named: "EaseUIResource.bundle/moreMenu/more_icon"), select: UIImage(named: "EaseUIResource.bundle/moreMenu/more-xiaoxi_icon")) {
             if self.moreMenuView == nil {
                 self.moreMenuView = MoreMenuView.showMoreMenuView(self.view, block: { (index) in
                     self.jumpVc(index)
@@ -52,7 +52,7 @@ extension EaseChatDetailsController{
             }
         }
     }
-    func jumpVc(index:Int){
+    func jumpVc(_ index:Int){
         disMissMoreMenuView()
         switch index {
         case 0:
@@ -89,7 +89,7 @@ extension EaseChatDetailsController{
     func disMissMoreMenuView(){
         var frame = self.moreMenuView!.backImageView.frame
         frame.origin.y = -96
-        UIView.animateWithDuration(0.5, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             self.moreMenuView?.backImageView.frame = frame
             }, completion: { (com) in
                 if com {
@@ -98,12 +98,12 @@ extension EaseChatDetailsController{
                 }
         })
     }
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NSNotificationCenter.defaultCenter().postNotificationName(UpdateMessageCount, object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: UpdateMessageCount), object: nil)
         
     }
 }

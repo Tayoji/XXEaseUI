@@ -19,17 +19,17 @@ let UpdateMessageCount = "UpdateMessageCount"
 
 let NoDisturbStatus = "NoDisturbStatus"
 let NotificationJumpMessage = "NotificationJumpMessage"
-public class EaseMobManager:NSObject,EMChatManagerDelegate,EMClientDelegate{
-    public static let instance = EaseMobManager()
+open class EaseMobManager:NSObject,EMChatManagerDelegate,EMClientDelegate{
+    open static let instance = EaseMobManager()
     
     var unreadMessagesCount:Int32 = 0
     
-    private override init(){
+    fileprivate override init(){
     }
-    func configEaseMob(application:UIApplication,launchOptions:[NSObject: AnyObject]?){
-      EaseSDKHelper.shareHelper().easemobApplication(application, didFinishLaunchingWithOptions: launchOptions, appkey: AppKey, apnsCertName: apnsCertName, otherConfig: [kSDKConfigEnableConsoleLogger:true])
-        EMClient.sharedClient().chatManager.addDelegate(self, delegateQueue: nil)
-        EMClient.sharedClient().addDelegate(self, delegateQueue: nil)
+    func configEaseMob(_ application:UIApplication,launchOptions:[AnyHashable: Any]?){
+      EaseSDKHelper.share().easemobApplication(application, didFinishLaunchingWithOptions: launchOptions, appkey: AppKey, apnsCertName: apnsCertName, otherConfig: [kSDKConfigEnableConsoleLogger:true])
+        EMClient.shared().chatManager.add(self, delegateQueue: nil)
+        EMClient.shared().add(self, delegateQueue: nil)
     }
 
     func login(){
@@ -51,28 +51,28 @@ public class EaseMobManager:NSObject,EMChatManagerDelegate,EMClientDelegate{
     
     
     func isLoggedIn() -> Bool {
-        return EMClient.sharedClient().isLoggedIn
+        return EMClient.shared().isLoggedIn
     }
-    func logout(block:((error:EMError?) -> Void)?){
-        let error =  EMClient.sharedClient().logout(true)
+    func logout(_ block:((_ error:EMError?) -> Void)?){
+        let error =  EMClient.shared().logout(true)
         if (block != nil) {
-            block!(error: error)
+            block!(error)
         }
     }
     // 未读消息
     func unreadMessageCount() ->Int32{
         var count:Int32 = 0
-        let conversations = EMClient.sharedClient().chatManager.getAllConversations() as! [EMConversation]
+        let conversations = EMClient.shared().chatManager.getAllConversations() as! [EMConversation]
         for con in conversations {
           count += con.unreadMessagesCount
         }
         return count
     }
     // 接受消息
-    public func didReceiveMessages(aMessages: [AnyObject]!) {
+    open func didReceiveMessages(_ aMessages: [AnyObject]!) {
         
-        NSNotificationCenter.defaultCenter().postNotificationName(UpdateMessage, object: nil)
-        NSNotificationCenter.defaultCenter().postNotificationName(UpdateMessageCount, object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: UpdateMessage), object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: UpdateMessageCount), object: nil)
         if !aMessages.isEmpty{
             if let message = aMessages.last as? EMMessage{
                 PromptManager.instance.play(message)
@@ -83,31 +83,31 @@ public class EaseMobManager:NSObject,EMChatManagerDelegate,EMClientDelegate{
     }
     
     
-    func showlocalNotification(message:EMMessage){
+    func showlocalNotification(_ message:EMMessage){
         let localNotification = UILocalNotification.init()
-        localNotification.fireDate = NSDate()
-        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+        localNotification.fireDate = Date()
+        localNotification.timeZone = TimeZone.current
         localNotification.alertLaunchImage = "AppIcon"
-         let con = EMClient.sharedClient().chatManager.getConversation(message.conversationId, type: EMConversationTypeChat, createIfNotExist: false)
-        if con.isNotice() {
+         let con = EMClient.shared().chatManager.getConversation(message.conversationId, type: EMConversationTypeChat, createIfNotExist: false)
+        if (con?.isNotice())! {
         
         }else{
             
         }
         if #available(iOS 8.2, *) {
-            localNotification.alertTitle = con.nickname
+            localNotification.alertTitle = con?.nickname
         } else {
             // Fallback on earlier versions
         }
         localNotification.soundName = UILocalNotificationDefaultSoundName
-        localNotification.alertBody = con.lastMessageText
-        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        localNotification.alertBody = con?.lastMessageText
+        UIApplication.shared.scheduleLocalNotification(localNotification)
     }
-    func rx_unreadMessagesCount(count:Int){
+    func rx_unreadMessagesCount(_ count:Int){
         
     }
     //异地登陆
-    public func didLoginFromOtherDevice() {
+    open func didLoginFromOtherDevice() {
 //            MBProgressHUD.MB_ShowMessage(keyWindow, message: "账号在其它设备登录,请重新登录").completion({
 //            UserModel.removeUserInfo()
 //            let vc = mainSB.instantiateViewControllerWithIdentifier("loginNavigationController")

@@ -12,12 +12,12 @@ class EaseChatListController: UIViewController {
     var conversations = [EMConversation]()
     var isNotices = true
     var tableView : UITableView!
-    var changeMessageCountBlock:((count:Int32) ->Void)?
+    var changeMessageCountBlock:((_ count:Int32) ->Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView = UITableView(frame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64), style: UITableViewStyle.Plain)
-         tableView.registerNib(UINib.init(nibName: "ChatListCell", bundle: nil), forCellReuseIdentifier: "ChatListCell")
+        tableView = UITableView(frame:CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height - 64), style: UITableViewStyle.plain)
+         tableView.register(UINib.init(nibName: "ChatListCell", bundle: nil), forCellReuseIdentifier: "ChatListCell")
         tableView.dataSource = self
         tableView.delegate = self
 //        tableView.backgroundColor = UIColor.backgroundColor()
@@ -31,19 +31,19 @@ class EaseChatListController: UIViewController {
         }
         tableView.tableFooterView = UIView()
         tableView.mj_header.beginRefreshing()
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(EaseChatListController.refreshAndSort), name: UpdateMessage, object: nil)
+        NotificationCenter.default.removeObserver(self)
+        NotificationCenter.default.addObserver(self, selector: #selector(EaseChatListController.refreshAndSort), name: NSNotification.Name(rawValue: UpdateMessage), object: nil)
         // Do any additional setup after loading the view.
         
     }
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.refreshAndSort()
     }
     func refreshAndSort(){
         var count:Int32 = 0
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { [unowned self] in
-            self.conversations =  (EMClient.sharedClient().chatManager.getAllConversations() as! [EMConversation]).filter({ (con) -> Bool in
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: { [unowned self] in
+            self.conversations =  (EMClient.shared().chatManager.getAllConversations() as! [EMConversation]).filter({ (con) -> Bool in
                 if let  _ = con.latestMessage {
                     if con.isNotice() == self.isNotices {
                         count += con.unreadMessagesCount
@@ -54,16 +54,16 @@ class EaseChatListController: UIViewController {
 //                    return con.isNotice() == self.isNotices
                 }
                 return false
-            }).sort({ (con1, con2) -> Bool in
+            }).sorted(by: { (con1, con2) -> Bool in
                 return con1.latestMessage.timestamp > con2.latestMessage.timestamp
                 
             })
-            dispatch_async(dispatch_get_main_queue(), {
+            DispatchQueue.main.async(execute: {
                 self.tableView.mj_header.endRefreshing()
                 self.conversations.count == 0 ? self.tableView.mj_footer.endRefreshing("您暂时没有消息", clickable: nil) : self.tableView.mj_footer.endRefreshingWithNoMoreData()
                 self.tableView.reloadData()
                 if self.changeMessageCountBlock != nil {
-                    self.changeMessageCountBlock!(count: count)
+                    self.changeMessageCountBlock!(count)
                 }
             })
             })
@@ -81,28 +81,28 @@ class EaseChatListController: UIViewController {
 
 }
 extension EaseChatListController:UITableViewDataSource{
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return conversations.count
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ChatListCell", forIndexPath: indexPath) as!  ChatListCell
-        cell.showData(conversations[indexPath.row])
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatListCell", for: indexPath) as!  ChatListCell
+        cell.showData(conversations[(indexPath as NSIndexPath).row])
         return cell
     }
-    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
-        return UITableViewCellEditingStyle.Delete
+    @objc(tableView:editingStyleForRowAtIndexPath:) func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return UITableViewCellEditingStyle.delete
     }
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete{
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
            // EMClient.sharedClient().chatManager.deleteConversation(conversations[indexPath.row].conversationId, deleteMessages: true)
-             EMClient.sharedClient().chatManager.deleteConversation(conversations[indexPath.row].conversationId, isDeleteMessages: true, completion: { (str, error) in
+             EMClient.shared().chatManager.deleteConversation(conversations[(indexPath as NSIndexPath).row].conversationId, isDeleteMessages: true, completion: { (str, error) in
                 
              })
-            conversations.removeAtIndex(indexPath.row)
+            conversations.remove(at: (indexPath as NSIndexPath).row)
             tableView.reloadData()
         }
     }

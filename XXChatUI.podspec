@@ -7,12 +7,14 @@ s.homepage     = "https://github.com/Tayoji/XXEaseUI"
 s.license      = { :type => "MIT", :file => "LICENCE" }
 s.author             = { "Tayoji" => "595521651@qq.com" }
 #s.social_media_url   = "http://twitter.com/vikmeup"
-s.platform     = :ios
-s.ios.deployment_target = '8.0'
+s.platform             = :ios, "8.0"
+#s.ios.deployment_target = '8.0'
 s.source       = { :git => "https://github.com/Tayoji/XXEaseUI.git", :tag => s.version }
 s.source_files  = "XXEaseUI/ChatUI/EMUIKit/**/*.{h,m,a}"
-s.resources     = "XXEaseUI/ChatUI/resources/*"
+s.resources     = "XXEaseUI/ChatUI/resources/*.{a,bundle}"
 #s.framework  = 'HyphenateFullSDK'
 s.requires_arc = true
-s.dependency 'HyphenateFullSDK'
+s.dependency  'HyphenateFullSDK'
+s.dependency  'MJRefresh'
+
 end

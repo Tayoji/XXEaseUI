@@ -13,7 +13,7 @@ class EaseChatDetailsController: EaseMessageViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().postNotificationName(UpdateMessageCount, object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: UpdateMessageCount), object: nil)
         self.configurationView()
         hasNewMessages = EaseMobManager.instance.unreadMessageCount() > 0
         // Do any additional setup after loading the view.

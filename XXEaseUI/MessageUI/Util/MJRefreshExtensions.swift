@@ -17,13 +17,13 @@ extension MJRefreshFooter{
      - parameter message:   提示消息
      - parameter clickable: 是可以下拉 或者 点击
      */
-    func endRefreshing(message:String?,clickable:Bool?) {
+    func endRefreshing(_ message:String?,clickable:Bool?) {
         if clickable == nil || !(clickable!){
             endRefreshingWithNoMoreData()
         }else{
             endRefreshing()
         }
-        hidden = false
+        isHidden = false
         
         for view in subviews{
             if view is UILabel{
@@ -34,13 +34,13 @@ extension MJRefreshFooter{
     }
 }
 extension UIScrollView{
-    func addRefreshFooter(refreshingBlock:() -> Void) {
+    func addRefreshFooter(_ refreshingBlock:@escaping () -> Void) {
         
         let footer = MJRefreshAutoNormalFooter(refreshingBlock: refreshingBlock)
         self.mj_footer = footer
     }
     
-    func addRefreshHeader(refreshingBlock:() -> Void) {
+    func addRefreshHeader(_ refreshingBlock:@escaping () -> Void) {
         let header = MJRefreshNormalHeader(refreshingBlock: refreshingBlock)
         self.mj_header = header
     }

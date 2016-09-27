@@ -20,33 +20,33 @@ class ChatListCell: UITableViewCell {
         super.awakeFromNib()
         avatarImg.layer.masksToBounds = true
         avatarImg.layer.cornerRadius = 5
-        separatorInset = UIEdgeInsetsZero
-        layoutMargins = UIEdgeInsetsZero
+        separatorInset = UIEdgeInsets.zero
+        layoutMargins = UIEdgeInsets.zero
         // Initialization code
     }
-    func showData(model:EMConversation){
+    func showData(_ model:EMConversation){
         infoLabel.text = model.lastMessageText
         titleLabel.text = model.nickname
         dateLabel.text = model.dateString()
-        countLabel.hidden = model.unreadMessagesCount == 0
+        countLabel.isHidden = model.unreadMessagesCount == 0
         
         countLabel.text = "\(model.unreadMessagesCount)"
         if model.unreadMessagesCount > 9 {
-            let width = (countLabel.text! as NSString).boundingRectWithSize(CGSizeMake(50, 15), options: NSStringDrawingOptions.UsesFontLeading, attributes: [NSFontAttributeName:countLabel.font], context: nil).size.width
+            let width = (countLabel.text! as NSString).boundingRect(with: CGSize(width: 50, height: 15), options: NSStringDrawingOptions.usesFontLeading, attributes: [NSFontAttributeName:countLabel.font], context: nil).size.width
             countWidth.constant = 10 + width
         }else{
             countWidth.constant = 15
         }
         
         if model.avatar.hasPrefix("http"){
-            avatarImg.sd_setImageWithURL(NSURL.init(string: model.avatar)!, placeholderImage: UIImage.init(named: "EaseUIResource.bundle/user"))
+            avatarImg.sd_setImage(with: URL.init(string: model.avatar)!, placeholderImage: UIImage.init(named: "EaseUIResource.bundle/user"))
         }else{
             avatarImg.image = UIImage(named: model.avatar)
             
         }
         
     }
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

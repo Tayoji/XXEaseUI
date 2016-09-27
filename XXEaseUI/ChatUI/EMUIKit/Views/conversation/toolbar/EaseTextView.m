@@ -154,10 +154,11 @@
                                             NSParagraphStyleAttributeName : paragraphStyle }];
         }
         else {
-            [self.placeHolder drawInRect:placeHolderRect
-                                withFont:self.font
-                           lineBreakMode:NSLineBreakByTruncatingTail
-                               alignment:self.textAlignment];
+//            [self.placeHolder drawInRect:placeHolderRect
+//                                withFont:self.font
+//                           lineBreakMode:NSLineBreakByTruncatingTail
+//                               alignment:self.textAlignment];
+            [self.placeHolder drawInRect:placeHolderRect withAttributes:@{NSFontAttributeName:self.font}];
         }
     }
 }

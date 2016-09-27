@@ -11,7 +11,7 @@
  */
 
 #import "EaseMessageViewController.h"
-
+#import <AVKit/AVKit.h>
 #import <Foundation/Foundation.h>
 #import <Photos/Photos.h>
 #import <AssetsLibrary/AssetsLibrary.h>
@@ -71,7 +71,7 @@
         _scrollToBottomWhenAppear = YES;
         _messsagesSource = [NSMutableArray array];
         
-        [_conversation markAllMessagesAsRead];
+        [_conversation markAllMessagesAsRead:nil];
     }
     
     return self;
@@ -328,7 +328,7 @@
             [self _sendHasReadResponseForMessages:unreadMessages isRead:YES];
         }
         
-        [_conversation markAllMessagesAsRead];
+        [_conversation markAllMessagesAsRead:nil];
     }
 }
 
@@ -522,7 +522,8 @@
         if (imageBody.thumbnailDownloadStatus > EMDownloadStatusSuccessed)
         {
             //下载缩略图
-            [[[EMClient sharedClient] chatManager] asyncDownloadMessageThumbnail:message progress:nil completion:completion];
+//            [[[EMClient sharedClient] chatManager] asyncDownloadMessageThumbnail:message progress:nil completion:completion];
+            [[[EMClient sharedClient] chatManager] downloadMessageThumbnail:message progress:nil completion:completion];
         }
     }
     else if ([messageBody type] == EMMessageBodyTypeVideo)
@@ -531,7 +532,9 @@
         if (videoBody.thumbnailDownloadStatus > EMDownloadStatusSuccessed)
         {
             //下载缩略图
-            [[[EMClient sharedClient] chatManager] asyncDownloadMessageThumbnail:message progress:nil completion:completion];
+//            [[[EMClient sharedClient] chatManager] asyncDownloadMessageThumbnail:message progress:nil completion:completion];
+            
+            [[[EMClient sharedClient] chatManager] downloadMessageThumbnail:message progress:nil completion:completion];
         }
     }
     else if ([messageBody type] == EMMessageBodyTypeVoice)
@@ -540,7 +543,9 @@
         if (voiceBody.downloadStatus > EMDownloadStatusSuccessed)
         {
             //下载语言
-            [[EMClient sharedClient].chatManager asyncDownloadMessageAttachments:message progress:nil completion:completion];
+//            [[EMClient sharedClient].chatManager asyncDownloadMessageAttachments:message progress:nil completion:completion];
+            [[EMClient sharedClient].chatManager downloadMessageAttachment:message progress:nil completion:completion];
+            
         }
     }
 }
@@ -596,7 +601,10 @@
     {
         for (EMMessage *message in unreadMessages)
         {
-            [[EMClient sharedClient].chatManager asyncSendReadAckForMessage:message];
+//            [[EMClient sharedClient].chatManager asyncSendReadAckForMessage:message];
+            [[EMClient sharedClient].chatManager sendMessageReadAck:message completion:^(EMMessage *aMessage, EMError *aError) {
+                
+            }];
         }
     }
 }
@@ -645,6 +653,7 @@
         
         NSURL *videoURL = [NSURL fileURLWithPath:localPath];
         MPMoviePlayerViewController *moviePlayerController = [[MPMoviePlayerViewController alloc] initWithContentURL:videoURL];
+        
         [moviePlayerController.moviePlayer prepareToPlay];
         moviePlayerController.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
         [self presentMoviePlayerViewControllerAnimated:moviePlayerController];
@@ -664,7 +673,10 @@
     
     if (videoBody.thumbnailDownloadStatus == EMDownloadStatusFailed || ![[NSFileManager defaultManager] fileExistsAtPath:videoBody.thumbnailLocalPath]) {
         [self showHint:@"begin downloading thumbnail image, click later"];
-        [[EMClient sharedClient].chatManager asyncDownloadMessageThumbnail:model.message progress:nil completion:completion];
+    
+
+        
+        [[EMClient sharedClient].chatManager downloadMessageThumbnail:model.message progress:nil completion:completion];
         return;
     }
     
@@ -675,7 +687,7 @@
     }
     
     [self showHudInView:self.view hint:NSEaseLocalizedString(@"message.downloadingVideo", @"downloading video...")];
-    [[EMClient sharedClient].chatManager asyncDownloadMessageAttachments:model.message progress:nil completion:^(EMMessage *message, EMError *error) {
+    [[EMClient sharedClient].chatManager downloadMessageAttachment:model.message progress:nil completion:^(EMMessage *message, EMError *error) {
         [weakSelf hideHud];
         if (!error) {
             block();
@@ -683,6 +695,14 @@
             [weakSelf showHint:NSEaseLocalizedString(@"message.videoFail", @"video for failure!")];
         }
     }];
+//    [[EMClient sharedClient].chatManager asyncDownloadMessageAttachments:model.message progress:nil completion:^(EMMessage *message, EMError *error) {
+//        [weakSelf hideHud];
+//        if (!error) {
+//            block();
+//        }else{
+//            [weakSelf showHint:NSEaseLocalizedString(@"message.videoFail", @"video for failure!")];
+//        }
+//    }];
 }
 
 - (void)_imageMessageCellSelected:(id<IMessageModel>)model
@@ -712,8 +732,7 @@
                 }
             }
 //            [weakSelf showHudInView:weakSelf.view hint:NSEaseLocalizedString(@"message.downloadingImage", @"downloading a image...")];
-            [[EMClient sharedClient].chatManager asyncDownloadMessageAttachments:model.message progress:nil completion:^(EMMessage *message, EMError *error) {
-//                [weakSelf hideHud];
+            [[EMClient sharedClient].chatManager downloadMessageAttachment:model.message progress:nil completion:^(EMMessage *message, EMError *error) {
                 if (!error) {
                     //发送已读回执
                     [weakSelf _sendHasReadResponseForMessages:@[model.message] isRead:YES];
@@ -723,7 +742,7 @@
                         //                                weakSelf.isScrollToBottom = NO;
                         if (image)
                         {
-//                            [[EaseMessageReadManager defaultManager] showBrowserWithImages:@[image]];
+                            //                            [[EaseMessageReadManager defaultManager] showBrowserWithImages:@[image]];
                         }
                         else
                         {
@@ -732,17 +751,41 @@
                         return ;
                     }
                 }
-//                [weakSelf showHint:NSEaseLocalizedString(@"message.imageFail", @"image for failure!")];
+
             }];
+//            [[EMClient sharedClient].chatManager asyncDownloadMessageAttachments:model.message progress:nil completion:^(EMMessage *message, EMError *error) {
+////                [weakSelf hideHud];
+//                if (!error) {
+//                    //发送已读回执
+//                    [weakSelf _sendHasReadResponseForMessages:@[model.message] isRead:YES];
+//                    NSString *localPath = message == nil ? model.fileLocalPath : [(EMImageMessageBody*)message.body localPath];
+//                    if (localPath && localPath.length > 0) {
+//                        UIImage *image = [UIImage imageWithContentsOfFile:localPath];
+//                        //                                weakSelf.isScrollToBottom = NO;
+//                        if (image)
+//                        {
+////                            [[EaseMessageReadManager defaultManager] showBrowserWithImages:@[image]];
+//                        }
+//                        else
+//                        {
+//                            NSLog(@"Read %@ failed!", localPath);
+//                        }
+//                        return ;
+//                    }
+//                }
+////                [weakSelf showHint:NSEaseLocalizedString(@"message.imageFail", @"image for failure!")];
+//            }];
         }else{
             //获取缩略图
-            [[EMClient sharedClient].chatManager asyncDownloadMessageThumbnail:model.message progress:nil completion:^(EMMessage *message, EMError *error) {
+            [[EMClient sharedClient].chatManager downloadMessageAttachment:model.message progress:nil completion:^(EMMessage *message, EMError *error) {
                 if (!error) {
                     [weakSelf _reloadTableViewDataWithMessage:model.message];
                 }else{
-//                    [weakSelf showHint:NSEaseLocalizedString(@"message.thumImageFail", @"thumbnail for failure!")];
+                    //                    [weakSelf showHint:NSEaseLocalizedString(@"message.thumImageFail", @"thumbnail for failure!")];
                 }
+
             }];
+            
         }
     }
 }
@@ -759,7 +802,8 @@
     else if (downloadStatus == EMDownloadStatusFailed)
     {
         [self showHint:NSEaseLocalizedString(@"message.downloadingAudio", @"downloading voice, click later")];
-        [[EMClient sharedClient].chatManager asyncDownloadMessageAttachments:model.message progress:nil completion:NULL];
+
+        [[EMClient sharedClient].chatManager downloadMessageAttachment:model.message  progress:nil completion:NULL];
         return;
     }
     
@@ -873,6 +917,7 @@
         }
         else{
             moreMessages = [weakSelf.conversation loadMoreMessagesFromId:messageId limit:(int)count direction:EMMessageSearchDirectionUp];
+      
         }
         
         if ([moreMessages count] == 0) {
@@ -1243,8 +1288,9 @@
     }
     
     __weak typeof(self) weakself = self;
-    [[[EMClient sharedClient] chatManager] asyncResendMessage:model.message progress:nil completion:^(EMMessage *message, EMError *error) {
+    [[[EMClient sharedClient] chatManager] resendMessage:model.message progress:nil completion:^(EMMessage *message, EMError *error) {
         [weakself.tableView reloadData];
+
     }];
     
     [self.tableView reloadData];
@@ -1494,7 +1540,8 @@
             
             if ([self _shouldMarkMessageAsRead])
             {
-                [self.conversation markMessageAsReadWithId:message.messageId];
+//                [self.conversation markMessageAsReadWithId:message.messageId];
+                [self.conversation markMessageAsReadWithId:message.messageId error:nil];
             }
         }
     }
@@ -1623,8 +1670,8 @@
         id<IMessageModel> model = [self.dataArray objectAtIndex:self.menuIndexPath.row];
         NSMutableIndexSet *indexs = [NSMutableIndexSet indexSetWithIndex:self.menuIndexPath.row];
         NSMutableArray *indexPaths = [NSMutableArray arrayWithObjects:self.menuIndexPath, nil];
-        
-        [self.conversation deleteMessageWithId:model.message.messageId];
+        [self.conversation  deleteMessageWithId:model.message.messageId error:nil];
+//        [self.conversation deleteMessageWithId:model.message.messageId];
         [self.messsagesSource removeObject:model.message];
         
         if (self.menuIndexPath.row - 1 >= 0) {
@@ -1743,9 +1790,12 @@
                         progress:nil];
     
     __weak typeof(self) weakself = self;
-    [[EMClient sharedClient].chatManager asyncSendMessage:message progress:nil completion:^(EMMessage *aMessage, EMError *aError) {
+    [[EMClient sharedClient].chatManager sendMessage:message progress:nil completion:^(EMMessage *message, EMError *error) {
         [weakself.tableView reloadData];
+
     }];
+//    [[EMClient sharedClient].chatManager asyncSendMessage:message progress:nil completion:^(EMMessage *aMessage, EMError *aError) {
+//    }];
 }
 
 - (void)sendTextMessage:(NSString *)text
@@ -1867,7 +1917,7 @@
             [self _sendHasReadResponseForMessages:unreadMessages isRead:YES];
         }
         
-        [_conversation markAllMessagesAsRead];
+        [_conversation markAllMessagesAsRead:nil];
     }
 }
 
