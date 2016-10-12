@@ -22,8 +22,19 @@
 
 #else
 
+
+#if __has_include(<HyphenateSDK/EMClient.h>)
 #import <HyphenateSDK/EMClient.h>
+#else
+#import "EMClient.h"
+#endif
+
+
+#if __has_include(<HyphenateSDK/EMClientDelegate.h>)
 #import <HyphenateSDK/EMClientDelegate.h>
+#else
+#import "EMClientDelegate.h"
+#endif
 
 #endif
 
