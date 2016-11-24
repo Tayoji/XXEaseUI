@@ -19,6 +19,11 @@
 #import "NSDate+Category.h"
 #import "EaseLocalDefine.h"
 
+#if __has_include(<MJRefresh/MJRefresh.h>)
+#import <MJRefresh/MJRefresh.h>
+#else
+#import "MJRefresh.h"
+#endif
 @interface EaseConversationListViewController ()
 
 @end
@@ -28,19 +33,33 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [self registerNotifications];
+    [self updateConversations];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self unregisterNotifications];
+  //  [self unregisterNotifications];
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.estimatedRowHeight = 72;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    __weak typeof(self) weakSelf = self;
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf tableViewDidTriggerHeaderRefresh];
+    }];
+    [self registerNotifications];
+    [[EaseMobManager share] addObserver:self withConIds:@[@"admin"] notiBlock:^(NSArray *messages) {
+        NSLog(@"%@",messages);
+    }];
+
     // Do any additional setup after loading the view.
+}
+-(void)dealloc{
+    [[EaseMobManager share] removeNotiObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,7 +95,7 @@
         return cell;
     }
     
-    id<IConversationModel> model = [self.dataArray objectAtIndex:indexPath.row];
+    EMConversation * model = [self.dataArray objectAtIndex:indexPath.row];
     cell.model = model;
     
     if (_dataSource && [_dataSource respondsToSelector:@selector(conversationListViewController:latestMessageTitleForConversationModel:)]) {
@@ -98,7 +117,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [EaseConversationCell cellHeightWithModel:nil];
+    return UITableViewAutomaticDimension;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -109,9 +128,10 @@
         EaseConversationModel *model = [self.dataArray objectAtIndex:indexPath.row];
         [_delegate conversationListViewController:self didSelectConversationModel:model];
     } else {
-        EaseConversationModel *model = [self.dataArray objectAtIndex:indexPath.row];
-        EaseMessageViewController *viewController = [[EaseMessageViewController alloc] initWithConversationChatter:model.conversation.conversationId conversationType:model.conversation.type];
-        viewController.title = model.title;
+        EMConversation * model = [self.dataArray objectAtIndex:indexPath.row];
+        EaseMessageViewController *viewController = [[EaseMessageViewController alloc] initWithConversationChatter:model.conversationId nickname:model.nickname avatar:model.avatar ownNickname:[EaseMobManager share].imNickName ownAvatar:[EaseMobManager share].imAvatarPath];
+        viewController.title = model.nickname;
+        viewController.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }
@@ -158,7 +178,23 @@
 
 - (void)tableViewDidTriggerHeaderRefresh
 {
-    NSArray *conversations = [[EMClient sharedClient].chatManager getAllConversations];
+    [self updateConversations];
+    
+    [self tableViewDidFinishTriggerHeader:YES reload:YES];
+}
+
+- (void)updateConversations{
+ 
+    NSMutableArray * conversations = [[NSMutableArray alloc] init];
+    if (self.dataSource && [self.dataSource respondsToSelector:@selector(filerController:modelForConversation:)]){
+        for (EMConversation * con in [[EMClient sharedClient].chatManager getAllConversations]) {
+            if ([self.dataSource filerController:self modelForConversation:con]) {
+                [conversations addObject:con];
+            }
+        }
+    }else{
+        [conversations addObjectsFromArray:[[EMClient sharedClient].chatManager getAllConversations]];
+    }
     NSArray* sorted = [conversations sortedArrayUsingComparator:
                        ^(EMConversation *obj1, EMConversation* obj2){
                            EMMessage *message1 = [obj1 latestMessage];
@@ -173,25 +209,26 @@
     
     
     [self.dataArray removeAllObjects];
+    [self.tableView reloadData];
+    
     for (EMConversation *converstion in sorted) {
-        EaseConversationModel *model = nil;
+        EMConversation *model = nil;
         if (self.dataSource && [self.dataSource respondsToSelector:@selector(conversationListViewController:modelForConversation:)]) {
             model = [self.dataSource conversationListViewController:self
-                                                   modelForConversation:converstion];
+                                               modelForConversation:converstion];
         }
         else{
-            model = [[EaseConversationModel alloc] initWithConversation:converstion];
+            model = converstion;
         }
         
         if (model) {
+            
             [self.dataArray addObject:model];
         }
     }
     
     [self.tableView reloadData];
-    [self tableViewDidFinishTriggerHeader:YES reload:NO];
 }
-
 #pragma mark - EMGroupManagerDelegate
 
 - (void)didUpdateGroupList:(NSArray *)groupList
@@ -211,15 +248,13 @@
     [[EMClient sharedClient].groupManager removeDelegate:self];
 }
 
-- (void)dealloc{
-    [self unregisterNotifications];
-}
+
 
 #pragma mark - private
-- (NSString *)_latestMessageTitleForConversationModel:(id<IConversationModel>)conversationModel
+- (NSString *)_latestMessageTitleForConversationModel:(EMConversation *)conversationModel
 {
     NSString *latestMessageTitle = @"";
-    EMMessage *lastMessage = [conversationModel.conversation latestMessage];
+    EMMessage *lastMessage = [conversationModel latestMessage];
     if (lastMessage) {
         EMMessageBody *messageBody = lastMessage.body;
         switch (messageBody.type) {
@@ -250,10 +285,10 @@
     return latestMessageTitle;
 }
 
-- (NSString *)_latestMessageTimeForConversationModel:(id<IConversationModel>)conversationModel
+- (NSString *)_latestMessageTimeForConversationModel:(EMConversation *)conversationModel
 {
     NSString *latestMessageTime = @"";
-    EMMessage *lastMessage = [conversationModel.conversation latestMessage];;
+    EMMessage *lastMessage = [conversationModel latestMessage];;
     if (lastMessage) {
         double timeInterval = lastMessage.timestamp ;
         if(timeInterval > 140000000000) {
@@ -264,6 +299,11 @@
         latestMessageTime = [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:timeInterval]];
     }
     return latestMessageTime;
+}
+
+#pragma mark - private
+-(void)didReceiveMessages:(NSArray *)aMessages{
+    [self updateConversations];
 }
 
 @end

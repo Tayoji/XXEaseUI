@@ -13,7 +13,8 @@ class LocalViewController: ViewController,UITableViewDelegate,UITableViewDataSou
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.estimatedRowHeight = 60
+        tableView.rowHeight = UITableViewAutomaticDimension
         // Do any additional setup after loading the view.
     }
     
@@ -28,7 +29,13 @@ class LocalViewController: ViewController,UITableViewDelegate,UITableViewDataSou
         return 2
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = EaseMessageViewController(conversationChatter: "8aec5129e1627c00d0e5c0bb1eeb439d", nickname: "消息", avatar: "cuxiao_icon", ownNickname: "测试", ownAvatar: "")
+        vc?.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc!, animated: true)
     }
 
     /*

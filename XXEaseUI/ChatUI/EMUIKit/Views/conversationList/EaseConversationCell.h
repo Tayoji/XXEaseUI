@@ -29,7 +29,7 @@ static CGFloat EaseConversationCellMinHeight = 60;
 
 @property (strong, nonatomic) UILabel *titleLabel;
 
-@property (strong, nonatomic) id<IConversationModel> model;
+@property (strong, nonatomic) EMConversation * model;
 
 @property (nonatomic) BOOL showAvatar;//default is "YES"
 

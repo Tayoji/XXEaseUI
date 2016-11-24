@@ -136,6 +136,10 @@
     
     [self tableViewDidTriggerHeaderRefresh];
     self.showRefreshHeader = YES;
+    __weak typeof(self) weakSelf = self;
+    [[EaseMobManager share] addObserver:self withConIds:@[self.conversation.conversationId] notiBlock:^(NSArray *messages) {
+        [weakSelf reloadMessages:messages];
+    }];
 //    self.tableView.tableHeaderView =  [ChatTableViewHeader configurationWithGoods:nil customerService:nil block:^(NSObject *value) {
 //        
 //    }];
@@ -165,6 +169,9 @@
 
 - (void)dealloc
 {
+    [[EaseMobManager share] removeNotiObserver:self];
+
+    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     [[EMCDDeviceManager sharedInstance] stopPlaying];
@@ -899,7 +906,7 @@
     }
     EMImageMessageBody *selectBody = (EMImageMessageBody*)[selectModel.message body];
     if ([selectBody type] == EMMessageBodyTypeImage) {
-        [[EaseMessageReadManager defaultManager] showBrowserWithImages:images selectIndex:index];
+       [self presentViewController:[[EaseMessageReadManager defaultManager] showBrowserWithImages:images selectIndex:index] animated:YES  completion:nil];
 
     }
 }
@@ -1526,11 +1533,7 @@
 }
 
 #pragma mark - EaseMob
-
-#pragma mark - EMChatManagerDelegate
-
-- (void)didReceiveMessages:(NSArray *)aMessages
-{
+- (void)reloadMessages:(NSArray *)aMessages{
     for (EMMessage *message in aMessages) {
         if ([self.conversation.conversationId isEqualToString:message.conversationId]) {
             [self addMessageToDataSource:message progress:nil];
@@ -1540,11 +1543,19 @@
             
             if ([self _shouldMarkMessageAsRead])
             {
-//                [self.conversation markMessageAsReadWithId:message.messageId];
+                //                [self.conversation markMessageAsReadWithId:message.messageId];
                 [self.conversation markMessageAsReadWithId:message.messageId error:nil];
             }
         }
     }
+
+}
+#pragma mark - EMChatManagerDelegate
+
+
+- (void)didReceiveMessages:(NSArray *)aMessages
+{
+   // [self reloadMessages:aMessages];
 }
 
 - (void)didReceiveCmdMessages:(NSArray *)aCmdMessages

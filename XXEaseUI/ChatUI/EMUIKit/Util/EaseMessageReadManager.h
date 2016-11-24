@@ -23,20 +23,20 @@ typedef void (^PlayBlock)(BOOL playing, EaseMessageModel *messageModel);
 
 @property (strong, nonatomic) MWPhotoBrowser *photoBrowser;
 @property (strong, nonatomic) FinishBlock finishBlock;
-
+@property (strong, nonatomic) UIViewController *presentVc;
 @property (strong, nonatomic) EaseMessageModel *audioMessageModel;
 
 + (id)defaultManager;
 
 //default
-- (void)showBrowserWithImages:(NSArray *)imageArray;
+- (UIViewController *)showBrowserWithImages:(NSArray *)imageArray;
 /**
  *  图片连读
  *
  *  @param imageArray
  *  @param index
  */
--(void)showBrowserWithImages:(NSArray *)imageArray selectIndex:(NSUInteger)index;
+-(UIViewController *)showBrowserWithImages:(NSArray *)imageArray selectIndex:(NSUInteger)index;
 
 /**
  *  准备播放语音文件

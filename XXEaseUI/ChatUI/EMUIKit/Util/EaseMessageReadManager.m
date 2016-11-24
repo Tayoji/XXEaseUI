@@ -116,7 +116,7 @@ static EaseMessageReadManager *detailInstance = nil;
 
 #pragma mark - public
 
-- (void)showBrowserWithImages:(NSArray *)imageArray
+- (UIViewController *)showBrowserWithImages:(NSArray *)imageArray
 {
     if (imageArray && [imageArray count] > 0) {
         NSMutableArray *photoArray = [NSMutableArray array];
@@ -143,14 +143,23 @@ static EaseMessageReadManager *detailInstance = nil;
         
         self.photos = photoArray;
     }
+
     
-    UIViewController *rootController = [self.keyWindow rootViewController];
-    [rootController presentViewController:self.photoNavigationController animated:YES completion:nil];
+//    UIViewController *rootController = [self.keyWindow rootViewController];
+//    while (rootController.parentViewController) {
+//        rootController = rootController.parentViewController;
+//    }
+//    UINavigationController * nav = self.photoNavigationController;
+//    [rootController presentViewController:nav animated:YES completion:nil];
+    return self.photoNavigationController;
+    
+
 }
 
--(void)showBrowserWithImages:(NSArray *)imageArray selectIndex:(NSUInteger)index{
-    [self showBrowserWithImages:imageArray];
+-(UIViewController *)showBrowserWithImages:(NSArray *)imageArray selectIndex:(NSUInteger)index{
     [self.photoBrowser setCurrentPhotoIndex:index];
+    
+    return  [self showBrowserWithImages:imageArray];
 }
 - (BOOL)prepareMessageAudioModel:(EaseMessageModel *)messageModel
                       updateViewCompletion:(void (^)(EaseMessageModel *prevAudioModel, EaseMessageModel *currentAudioModel))updateCompletion

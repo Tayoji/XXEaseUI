@@ -77,7 +77,7 @@
         _imageView.translatesAutoresizingMaskIntoConstraints = NO;
         _imageView.layer.cornerRadius = _imageCornerRadius;
         _imageView.clipsToBounds = YES;
-        _imageView.backgroundColor = [UIColor grayColor];
+        _imageView.backgroundColor = [UIColor clearColor];
         [self addSubview:_imageView];
         
         _badgeView = [[UILabel alloc] init];
@@ -105,6 +105,7 @@
     
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.imageView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.imageView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0]];
+    
 }
 
 - (void)_setupBadgeViewConstraint

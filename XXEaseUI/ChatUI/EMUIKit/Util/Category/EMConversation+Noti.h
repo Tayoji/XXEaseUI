@@ -14,6 +14,7 @@
 @property (nonatomic,copy) NSString * nickname;
 @property (nonatomic,copy) NSString * avatar;
 @property (nonatomic,copy,readonly) NSString * lastMessageText;
++(EMConversation *)fetchWithConversationId:(NSString *)conversationId nickname:(NSString *)nickname avatar:(NSString *)avatar;
 -(BOOL)isNotice;
 -(NSString *)dateString;
 +(void)saveConversationWithConversationId:(NSString *)conversationId nickname:(NSString *)nickname avatar:(NSString *)avatar;

@@ -11,4 +11,6 @@
 #import "EMSDK.h"
 
 #import "EaseUI.h"
+
+#import "MBProgressHUD.h"
 #endif /* Header_h */

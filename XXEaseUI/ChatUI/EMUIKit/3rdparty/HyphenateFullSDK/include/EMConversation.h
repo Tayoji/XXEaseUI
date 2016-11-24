@@ -15,7 +15,6 @@
 #import <Foundation/Foundation.h>
 
 #import "EMMessageBody.h"
-
 /*
  *  \~chinese
  *  会话类型

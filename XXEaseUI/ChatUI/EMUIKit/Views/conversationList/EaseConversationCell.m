@@ -11,10 +11,11 @@
  */
 
 #import "EaseConversationCell.h"
-
-#import "EMConversation.h"
+#import "EMConversation+Noti.h"
+#import "EaseMobManager.h"
 #import "UIImageView+EMWebCache.h"
-
+#import "MasonryHeader.h"
+#import "UIColor+Custom.h"
 CGFloat const EaseConversationCellPadding = 10;
 
 @interface EaseConversationCell()
@@ -35,12 +36,12 @@ CGFloat const EaseConversationCellPadding = 10;
 {
     // UIAppearance Proxy Defaults
     EaseConversationCell *cell = [self appearance];
-    cell.titleLabelColor = [UIColor blackColor];
-    cell.titleLabelFont = [UIFont systemFontOfSize:17];
-    cell.detailLabelColor = [UIColor lightGrayColor];
+    cell.titleLabelColor = [UIColor emBlackColor];
+    cell.titleLabelFont = [UIFont systemFontOfSize:15];
+    cell.detailLabelColor = [UIColor emGrayColor];
     cell.detailLabelFont = [UIFont systemFontOfSize:15];
-    cell.timeLabelColor = [UIColor blackColor];
-    cell.timeLabelFont = [UIFont systemFontOfSize:13];
+    cell.timeLabelColor = [UIColor emGrayColor];
+    cell.timeLabelFont = [UIFont systemFontOfSize:14];
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style
@@ -49,6 +50,8 @@ CGFloat const EaseConversationCellPadding = 10;
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         _showAvatar = YES;
+        self.separatorInset = UIEdgeInsetsZero;
+        self.layoutMargins = UIEdgeInsetsZero;
         [self _setupSubview];
     }
     
@@ -61,6 +64,8 @@ CGFloat const EaseConversationCellPadding = 10;
 {
     _avatarView = [[EaseImageView alloc] init];
     _avatarView.translatesAutoresizingMaskIntoConstraints = NO;
+    _avatarView.backgroundColor = [UIColor clearColor];
+    _avatarView.imageCornerRadius = 5.0;
     [self.contentView addSubview:_avatarView];
     
     _timeLabel = [[UILabel alloc] init];
@@ -87,8 +92,9 @@ CGFloat const EaseConversationCellPadding = 10;
     [self.contentView addSubview:_detailLabel];
     
     [self _setupAvatarViewConstraints];
-    [self _setupTimeLabelConstraints];
     [self _setupTitleLabelConstraints];
+
+    [self _setupTimeLabelConstraints];
     [self _setupDetailLabelConstraints];
 }
 
@@ -96,41 +102,50 @@ CGFloat const EaseConversationCellPadding = 10;
 
 - (void)_setupAvatarViewConstraints
 {
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.avatarView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTop multiplier:1.0 constant:EaseConversationCellPadding]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.avatarView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-EaseConversationCellPadding]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.avatarView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:EaseConversationCellPadding]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.avatarView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.avatarView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.avatarView attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0]];
+    [self.avatarView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.contentView).offset(15);
+        make.left.equalTo(self.contentView).offset(15);
+        make.bottom.equalTo(self.contentView).offset(-15);
+        make.width.and.height.mas_equalTo(44);
+
+    }];
+
+    
 }
 
 - (void)_setupTimeLabelConstraints
 {
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.timeLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTop multiplier:1.0 constant:EaseConversationCellPadding]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.timeLabel attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeRight multiplier:1.0 constant:-EaseConversationCellPadding]];
-    
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.timeLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeHeight multiplier:0.5 constant:0]];
+    [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.titleLabel.mas_centerY);
+        make.right.equalTo(self.contentView).offset(-15);
+        make.height.mas_equalTo(15);
+        make.width.mas_greaterThanOrEqualTo(85);
+        
+    }];
+   
 }
 
 - (void)_setupTitleLabelConstraints
 {
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTop multiplier:1.0 constant:EaseConversationCellPadding]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeHeight multiplier:0.5 constant:-EaseConversationCellPadding]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.timeLabel attribute:NSLayoutAttributeLeft multiplier:1.0 constant:-EaseConversationCellPadding]];
-    
-    self.titleWithAvatarLeftConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.avatarView attribute:NSLayoutAttributeRight multiplier:1.0 constant:EaseConversationCellPadding];
-    self.titleWithoutAvatarLeftConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:EaseConversationCellPadding];
-    [self addConstraint:self.titleWithAvatarLeftConstraint];
+    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.avatarView.mas_top);
+        make.left.equalTo(self.avatarView.mas_right).offset(10);
+        make.right.equalTo(self.timeLabel.mas_left).offset(0);
+        make.height.mas_equalTo(16);
+        
+    }];
+
 }
 
 - (void)_setupDetailLabelConstraints
 {
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.detailLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.titleLabel attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.detailLabel attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-EaseConversationCellPadding]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.detailLabel attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeRight multiplier:1.0 constant:-EaseConversationCellPadding]];
-    
-    self.detailWithAvatarLeftConstraint = [NSLayoutConstraint constraintWithItem:self.detailLabel attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.avatarView attribute:NSLayoutAttributeRight multiplier:1.0 constant:EaseConversationCellPadding];
-    self.detailWithoutAvatarLeftConstraint = [NSLayoutConstraint constraintWithItem:self.detailLabel attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:EaseConversationCellPadding];
-    [self addConstraint:self.detailWithAvatarLeftConstraint];
+    [self.detailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.avatarView.mas_bottom);
+        make.left.equalTo(self.avatarView.mas_right).offset(10);
+        make.right.equalTo(self.contentView).offset(-15);
+        make.height.mas_equalTo(16);
+        
+    }];
 }
 
 #pragma mark - setter
@@ -140,48 +155,39 @@ CGFloat const EaseConversationCellPadding = 10;
     if (_showAvatar != showAvatar) {
         _showAvatar = showAvatar;
         self.avatarView.hidden = !showAvatar;
-        if (_showAvatar) {
-            [self removeConstraint:self.titleWithoutAvatarLeftConstraint];
-            [self removeConstraint:self.detailWithoutAvatarLeftConstraint];
-            [self addConstraint:self.titleWithAvatarLeftConstraint];
-            [self addConstraint:self.detailWithAvatarLeftConstraint];
-        }
-        else{
-            [self removeConstraint:self.titleWithAvatarLeftConstraint];
-            [self removeConstraint:self.detailWithAvatarLeftConstraint];
-            [self addConstraint:self.titleWithoutAvatarLeftConstraint];
-            [self addConstraint:self.detailWithoutAvatarLeftConstraint];
-        }
     }
 }
 
-- (void)setModel:(id<IConversationModel>)model
+- (void)setModel:(EMConversation *)model
 {
     _model = model;
     
-    if ([_model.title length] > 0) {
-        self.titleLabel.text = _model.title;
+    if ([model.nickname length] > 0) {
+        self.titleLabel.text = _model.nickname;
     }
     else{
-        self.titleLabel.text = _model.conversation.conversationId;
+        self.titleLabel.text = _model.conversationId;
     }
     
     if (self.showAvatar) {
-        if ([_model.avatarURLPath length] > 0){
-            [self.avatarView.imageView sd_setImageWithURL:[NSURL URLWithString:_model.avatarURLPath] placeholderImage:_model.avatarImage];
-        } else {
-            if (_model.avatarImage) {
-                self.avatarView.image = _model.avatarImage;
+        if ([_model.avatar length] > 0){
+            if ([_model.avatar hasPrefix:@"http"]) {
+                 [self.avatarView.imageView sd_setImageWithURL:[NSURL URLWithString:_model.avatar] placeholderImage:[[EaseMobManager share] imAvatarImg]];
+            }else{
+                self.avatarView.imageView.image = [UIImage imageNamed:model.avatar];
             }
+        }else{
+            self.avatarView.imageView.image = [EaseMobManager share].imAvatarImg;
+
         }
     }
     
-    if (_model.conversation.unreadMessagesCount == 0) {
+    if (_model.unreadMessagesCount == 0) {
         _avatarView.showBadge = NO;
     }
     else{
         _avatarView.showBadge = YES;
-        _avatarView.badge = _model.conversation.unreadMessagesCount;
+        _avatarView.badge = _model.unreadMessagesCount;
     }
 }
 

@@ -10,6 +10,7 @@
 		561BB7F41D9B6691001E348C /* EaseMobManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 561BB7F31D9B6691001E348C /* EaseMobManager.m */; };
 		56725D781D880B6E0015D9A5 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56725D761D880B6E0015D9A5 /* libopencore-amrnb.a */; };
 		56725D791D880B6E0015D9A5 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56725D771D880B6E0015D9A5 /* libopencore-amrwb.a */; };
+		56757A0A1DAF90A6000381A5 /* Observer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56757A091DAF90A6000381A5 /* Observer.m */; };
 		5693E6C41D9A1FF1001813AD /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5693E6C31D9A1FF1001813AD /* libHyphenateFullSDK.a */; };
 		5693E6C61D9A2117001813AD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5693E6C51D9A2117001813AD /* CoreMedia.framework */; };
 		5693E6C81D9A2120001813AD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5693E6C71D9A2120001813AD /* AudioToolbox.framework */; };
@@ -135,6 +136,8 @@
 		56C764031D81437600908639 /* EaseUIResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 56C763731D81437600908639 /* EaseUIResource.bundle */; };
 		56F570D21DAB8F6B002270D2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F570D11DAB8F6B002270D2 /* LoginViewController.swift */; };
 		56F570D41DACE89F002270D2 /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F570D31DACE89F002270D2 /* LocalViewController.swift */; };
+		56F570D61DAE16DE002270D2 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F570D51DAE16DE002270D2 /* SettingTableViewController.swift */; };
+		56F570DA1DAF1FA6002270D2 /* UIColor+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F570D91DAF1FA6002270D2 /* UIColor+Custom.m */; };
 		C49D58DCCFE5A756B967B3B4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8222D7F81FCBAE0136FE1662 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +164,8 @@
 		561BB7F31D9B6691001E348C /* EaseMobManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseMobManager.m; sourceTree = "<group>"; };
 		56725D761D880B6E0015D9A5 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
 		56725D771D880B6E0015D9A5 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		56757A081DAF90A6000381A5 /* Observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
+		56757A091DAF90A6000381A5 /* Observer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Observer.m; sourceTree = "<group>"; };
 		5693E69C1D9A1FF1001813AD /* EMCallLocalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallLocalView.h; sourceTree = "<group>"; };
 		5693E69D1D9A1FF1001813AD /* EMCallManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallManagerDelegate.h; sourceTree = "<group>"; };
 		5693E69E1D9A1FF1001813AD /* EMCallRemoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallRemoteView.h; sourceTree = "<group>"; };
@@ -451,6 +456,10 @@
 		56C763731D81437600908639 /* EaseUIResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EaseUIResource.bundle; sourceTree = "<group>"; };
 		56F570D11DAB8F6B002270D2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		56F570D31DACE89F002270D2 /* LocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
+		56F570D51DAE16DE002270D2 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		56F570D71DAE21E2002270D2 /* MasonryHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryHeader.h; sourceTree = "<group>"; };
+		56F570D81DAF1FA6002270D2 /* UIColor+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Custom.h"; sourceTree = "<group>"; };
+		56F570D91DAF1FA6002270D2 /* UIColor+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Custom.m"; sourceTree = "<group>"; };
 		6ADC3590FB3DA7B99BB0957B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7FA80390FA96DD00C0DF7E7C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8222D7F81FCBAE0136FE1662 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -924,6 +933,7 @@
 				56C762FB1D81437600908639 /* FixFopen.c */,
 				561BB7F21D9B6691001E348C /* EaseMobManager.h */,
 				561BB7F31D9B6691001E348C /* EaseMobManager.m */,
+				56F570D71DAE21E2002270D2 /* MasonryHeader.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -949,6 +959,10 @@
 				56C762E81D81437600908639 /* UIViewController+DismissKeyboard.m */,
 				56C762E91D81437600908639 /* UIViewController+HUD.h */,
 				56C762EA1D81437600908639 /* UIViewController+HUD.m */,
+				56F570D81DAF1FA6002270D2 /* UIColor+Custom.h */,
+				56F570D91DAF1FA6002270D2 /* UIColor+Custom.m */,
+				56757A081DAF90A6000381A5 /* Observer.h */,
+				56757A091DAF90A6000381A5 /* Observer.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1138,6 +1152,7 @@
 			children = (
 				56F570D11DAB8F6B002270D2 /* LoginViewController.swift */,
 				56F570D31DACE89F002270D2 /* LocalViewController.swift */,
+				56F570D51DAE16DE002270D2 /* SettingTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1355,6 +1370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F570DA1DAF1FA6002270D2 /* UIColor+Custom.m in Sources */,
 				56C763D71D81437600908639 /* UIViewController+HUD.m in Sources */,
 				56C763F11D81437600908639 /* EaseBubbleView+Video.m in Sources */,
 				56C763871D81437600908639 /* EMCDDeviceManager+Remind.m in Sources */,
@@ -1441,6 +1457,7 @@
 				56C763E61D81437600908639 /* EaseUserCell.m in Sources */,
 				56C763DF1D81437600908639 /* FixFopen.c in Sources */,
 				56C763E81D81437600908639 /* EaseBaseMessageCell.m in Sources */,
+				56757A0A1DAF90A6000381A5 /* Observer.m in Sources */,
 				56C763F01D81437600908639 /* EaseBubbleView+Text.m in Sources */,
 				56C763DE1D81437600908639 /* EaseEmotionManager.m in Sources */,
 				56C763EA1D81437600908639 /* EaseMessageCell.m in Sources */,
@@ -1451,6 +1468,7 @@
 				56C763C21D81437600908639 /* PSTCollectionViewItemKey.m in Sources */,
 				56C763891D81437600908639 /* amrFileCodec.mm in Sources */,
 				56C763F41D81437600908639 /* EaseChatToolbar.m in Sources */,
+				56F570D61DAE16DE002270D2 /* SettingTableViewController.swift in Sources */,
 				56C763D01D81437600908639 /* EMMessage+Parsing.m in Sources */,
 				56C763D61D81437600908639 /* UIViewController+DismissKeyboard.m in Sources */,
 				56C763EC1D81437600908639 /* EaseBubbleView+File.m in Sources */,

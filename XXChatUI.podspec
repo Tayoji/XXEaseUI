@@ -18,6 +18,7 @@ s.frameworks   = 'CoreMedia', 'AudioToolbox', 'AVFoundation', 'ImageIO', 'Mobile
 s.libraries    = 'iconv', 'c++', 'z', 'sqlite3', 'stdc++.6.0.9'
 #s.vendored_libraries = ['ChatUI/EMUIKit/3rdparty/HyphenateFullSDK/lib/libHyphenateFullSDK.a']
 s.xcconfig     = {'OTHER_LDFLAGS' => '-ObjC'}
-s.dependency  'MJRefresh'
+s.dependency   'MJRefresh'
+s.dependency   'Masonry'
 
 end

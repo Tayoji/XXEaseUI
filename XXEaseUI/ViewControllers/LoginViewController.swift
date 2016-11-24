@@ -9,10 +9,9 @@
 import UIKit
 
 class LoginViewController: UITableViewController {
-    var conIds = ["8aec5129e1627c00d0e5c0bb1eeb439d"]
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         // Do any additional setup after loading the view.
     }
 
@@ -22,8 +21,16 @@ class LoginViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        performSegue(withIdentifier: "tabbar", sender: (cell?.contentView.viewWithTag(11) as! UILabel).text)
+        let cell = tableView.cellForRow(at: indexPath)!
+        MBProgressHUD.showAdded(to: view, animated: true)
+        EaseMobManager.share().loginUsername((cell.contentView.viewWithTag(11) as! UILabel).text) {[unowned self , unowned cell] (error) in
+            MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
+            guard let _ = error else{
+                self.performSegue(withIdentifier: "tabbar", sender: (cell.contentView.viewWithTag(11) as! UILabel).text)
+                return
+            }
+            
+        }
     }
 
     // MARK: - Navigation

@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
        EaseMobManager.share().easemobApplication(application, didFinishLaunchingWithOptions: launchOptions, appkey: "xiucheren#supplier", apnsCertName: "supplier")
+        EaseMobManager.share().imNickName = "测试"
+        EaseMobManager.share().imAvatarPath = "tixianjilu_icon"
+        EaseMobManager.share().imAvatarImg = #imageLiteral(resourceName: "tixianjilu_icon")
         return true
     }
 

@@ -47,9 +47,11 @@ typedef NS_ENUM(int, DXDeleteConvesationType) {
 
 @protocol EaseConversationListViewControllerDataSource <NSObject>
 
-- (id<IConversationModel>)conversationListViewController:(EaseConversationListViewController *)conversationListViewController
+- (EMConversation *)conversationListViewController:(EaseConversationListViewController *)conversationListViewController
                         modelForConversation:(EMConversation *)conversation;
 
+- (BOOL)filerController:(EaseConversationListViewController *)conversationListViewController
+     modelForConversation:(EMConversation *)conversation;
 @optional
 
 /*!
@@ -61,7 +63,7 @@ typedef NS_ENUM(int, DXDeleteConvesationType) {
  @result 返回用户最后一条消息显示的内容
  */
 - (NSString *)conversationListViewController:(EaseConversationListViewController *)conversationListViewController
-      latestMessageTitleForConversationModel:(id<IConversationModel>)conversationModel;
+      latestMessageTitleForConversationModel:(EMConversation *)conversationModel;
 
 /*!
  @method
@@ -72,12 +74,15 @@ typedef NS_ENUM(int, DXDeleteConvesationType) {
  @result 返回用户最后一条消息时间的显示文案
  */
 - (NSString *)conversationListViewController:(EaseConversationListViewController *)conversationListViewController
-       latestMessageTimeForConversationModel:(id<IConversationModel>)conversationModel;
+       latestMessageTimeForConversationModel:(EMConversation *)conversationModel;
 
 @end
 
 
 @interface EaseConversationListViewController : EaseRefreshTableViewController <EMChatManagerDelegate,EMGroupManagerDelegate>
+
+@property (copy, nonatomic) NSArray * showConversationIds;
+@property (copy, nonatomic) NSArray * hiddenConversationIds;
 
 @property (weak, nonatomic) id<EaseConversationListViewControllerDelegate> delegate;
 @property (weak, nonatomic) id<EaseConversationListViewControllerDataSource> dataSource;

@@ -11,6 +11,12 @@
 #import "NSDate+Category.h"
 #define ConversationInfo @"Conversation_Info"
 @implementation EMConversation (Noti)
++(EMConversation *)fetchWithConversationId:(NSString *)conversationId nickname:(NSString *)nickname avatar:(NSString *)avatar{
+    EMConversation * con = [[EMClient sharedClient].chatManager getConversation:conversationId type:EMConversationTypeChat createIfNotExist:YES];
+    con.nickname = nickname;
+    con.avatar = avatar;
+    return con;
+}
 -(void)setAvatar:(NSString *)avatar{
     objc_setAssociatedObject(self, "avatar", avatar, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
